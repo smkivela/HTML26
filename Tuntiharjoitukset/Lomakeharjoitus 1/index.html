@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+    <!-- LÄHETÄ SÄHKÖPOSTIA LOMAKE -->
+    
+    <form>
+        
+        <h2>Lähetä sähköpostia</h2>
+
+    <label for="nimi">Nimi:</label>
+    <input type="text" id="nimi" name="nimi" required></input>
+
+    <label for="sähköposti">Sähköposti:</label>
+    <input type="email" id="sähköposti" name="sähköposti" placeholder="matti@example.com" required></input>
+
+    <label for="aihe">Aihe:</label>
+    <input type="text" id="aihe" name="aihe" required></textarea>
+
+    <label for="viesti">Viesti:</label>
+    <textarea type="text" id="viesti" name="viesti" required>Kirjoita viestisi</textarea>
+
+    <button type="submit">Lähetä</button>
+
+
+
+
+
+
+</form>
+
+<!-- REKISTERÖIDY LOMAKE -->
+
+<form>
+
+
+
+    <h2>Rekisteröidy</h2>
+
+    <label for="käyttäjänimi">Käyttäjänimi*</label>
+    <input type="text" id="käyttäjänimi" name="käyttäjänimi" required></input>
+
+     <label for="sähköposti">Sähköposti*</label>
+    <input type="email" id="sähköposti" name="sähköposti" required></input>
+
+     <label for="salasana">Salasana*</label>
+    <input type="password" id="salasana" name="salasana" minlength="7" required></input>
+
+     <label for="vahvistus">Salasanan vahvistus*</label>
+    <input type="password" id="vahvistus" name="vahvistus" minlength="7" required></input>
+
+     <label for="syntymäpäivä">Syntymäpäivä</label>
+    <input type="date" id="syntymäpäivä" name="syntymäpäivä"></input>
+
+<fieldset>
+ <legend>Käyttöehdot</legend>
+
+
+
+ <label for="käyttöehdot">Hyväksyn käyttöehdot*</label>
+ <input type="checkbox" id="käyttöehdot" name="käyttöehdot" checked></input>
+ 
+</fieldset>
+ 
+    <button type="submit">Rekisteröidy</button>
+
+    <p id="pakko"><em>*Tähdellä merkityt kentät ovat pakollisia.</em></p>
+
+
+</form>
+
+<!-- HARJOITUS 7 LOMAKE -->
+
+<form>
+
+    <label for="fname">Etunimi</label>
+    <input type="text" id="fname" name="fname"></input>
+
+    <label for="sähköposti">Sähköposti</label>
+    <input type="email" id="sähköposti" name="email"></input>
+
+    <label  for="pswrd">Salasana</label>
+    <input type="password" id="pswrd" name="pswrd"></input>
+
+     <label  for="ikä">Ikä</label>
+    <input type="number" id="ikä" name="ikä" min="18"></input>
+
+    <fieldset class="sukupuoli"> 
+
+      
+
+    <label  for="sukupuoli">Sukupuoli</label>
+       
+    <div>
+    <input type="radio" id="sukupuoli" name="sukupuoli" value="mies">Mies</input>
+</div>
+<div>
+<input type="radio" id="sukupuoli" name="sukupuoli" value="nainen">Nainen</input>
+
+</div>
+<div>
+        <input type="radio" id="sukupuoli" name="sukupuoli" value="muu">Muu</input>
+</div>
+    </fieldset>
+
+
+
+<label for="uutiskirje">Haluan tilata uutiskirjeen</label>
+ <input type="checkbox" id="uutiskirje" name="uutiskirje" checked></input>
+
+</br>
+
+<label for="teksti"></label>
+ <textarea id="teksti" name="teksti">Kirjoita tähän mitä haluat oppia</textarea>
+
+
+
+
+
+ <label for="kurssit">Kurssivalinta</label>
+ <select id="kurssit" name="kurssit">Kurssivalinta
+ <option value="matematiikka">Matematiikka</option>
+ <option value="historia">Historia</option>
+ <option value="maantieto">Maantieto</option>
+
+</select>
+
+
+<label for="käyttäjätunnus">Käyttäjätunnus</labe>
+    <input type="text" name="käyttäjätunnus" required min="4" max="12"></input>
+
+
+    <fieldset>
+
+        <legend>Yhteystiedot</legend>
+
+        <label for="nimi">Nimi</label>
+        <input id="nimi" type="text" name="nimi" placeholder="Matti Meikäläinen">
+
+        <label for="sähköpost">Sähköposti</label>
+        <input id="sähköposti" type="text" name="sähköposti" placeholder="Matti@example.com">
+
+
+
+
+
+    </fieldset>
+
+
+
+
+</form>
+
+
+
+    <form action="/lähetä" method="post">
+        
+        <h2>Lähetä sähköpostia</h2>
+
+    <label for="nimi">Nimi:</label>
+    <input type="text" id="nimi" name="nimi" required></input>
+
+    <label for="sähköposti">Sähköposti:</label>
+    <input type="email" id="sähköposti" name="sähköposti" placeholder="matti@example.com" required></input>
+
+    <label for="viesti">Viesti:</label>
+    <textarea type="text" id="viesti" name="viesti" required>Kirjoita viestisi</textarea>
+
+    <button type="submit">Lähetä</button>
+
+
+
+
+
+
+</form>
+
+
+
+</body>
+</html>
