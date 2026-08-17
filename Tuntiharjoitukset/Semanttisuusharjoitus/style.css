@@ -63,8 +63,12 @@ header{
     text-align: center;
     margin-bottom: 15px;
     padding-bottom: 20px;
+    background-color: rgb(0, 0, 0);
     border-radius: 90px;
-    background-image: url(kuvat/headertausta.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(kuvat/headertausta.jpg); 
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
     
 
     
