@@ -1,0 +1,87 @@
+body{
+    background-color: rgb(245, 226, 204);
+    margin: 0;
+}
+
+h1{
+    margin-top: 90px;
+    color: rgb(246, 154, 89);
+    font-size: 170px;
+    padding-bottom: 0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    text-align: center;
+    border-radius: 1000px;
+    margin-bottom: 100px;
+    background-color: rgb(88, 88, 88);
+    margin-top: 0%;
+    height: 700px;
+
+    background-image:
+    linear-gradient(to right, rgb(118, 117, 117) 0%, transparent 12%, transparent 12%, black 100%),
+    url(kuvat/logo.png);
+    background-position: center;
+
+    background-size: 30%;
+    background-repeat: no-repeat;
+    padding: 2px;
+    background-attachment: fixed;
+    
+    
+}
+
+#navi {
+    list-style: none;
+    margin-top: 170px;
+    display: flex;
+    font-size: 19px;
+    gap: 40px;
+    justify-content: center;
+
+}
+
+#navi a {
+    color: blanchedalmond;
+   
+
+}
+
+article {
+    text-align: center;
+}
+
+.sektiot{
+
+    display: flex;
+}
+
+aside{
+    font-size: small;
+}
+
+#slogan {
+    font-size: 50px;
+    color: rgb(246, 154, 89);
+    margin-top: 100px;
+   
+}
+
+.about{
+    max-width: 800px;
+   margin: auto;
+}
+
+h2{
+    color: rgb(255, 172, 62);
+}
+
+.cta {
+    background-color: rgb(198, 134, 134);
+    border-radius: 600px;
+}
+
+footer{
+    text-align: center;
+}
