@@ -1,0 +1,89 @@
+.skip-link
+{
+  position: absolute;
+  left: -9999px;
+ 
+}
+
+h1{
+    font-size: 90px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(239, 207, 196);
+}
+
+a{
+    color: rgb(226, 211, 211);
+}
+
+#navi {
+    
+    justify-content: center;
+    color: rgb(246, 240, 238);
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  
+}
+
+#slogan {
+
+    font-size: x-large;
+    padding-bottom: 90px;
+    color: rgb(239, 207, 196);
+    
+}
+
+
+body{
+    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 239, 218);
+}
+
+article{
+
+    text-align: left;
+}
+
+footer {
+
+    font-size: 12px;
+    text-align: center;
+    margin-top: auto;
+    background-color: rgb(251, 231, 189);
+     padding-bottom: 20px;
+    border-radius: 90px;
+  
+    
+    
+}
+
+header{
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    border-radius: 90px;
+    background-image: url(kuvat/headertausta.jpg);
+    
+
+    
+}
+
+main{
+    text-align: center;
+    background-color: rgb(239, 190, 122);
+    border-radius: 90px;
+    padding-bottom: 20px;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-right: 100px;
+}
+
+#maili{
+    color: black;
+}
