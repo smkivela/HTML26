@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+       <header>
+    <h1>Ota yhteyttä</h1>
+
+    <nav class="navigointi">
+        
+        <ul>
+            <li><button><a href="index.html">Etusivulle</a></button></li>
+            <li><button><a href="projektit.html">Projektit</a></button></li>
+        </ul>
+
+    </nav>
+
+
+
+
+</header>
+
+    <form>
+
+        <label for="nimi">Nimi</label>
+        <input type="text" name="nimi" id="nimi">
+
+        <label for="aihe">Aihe:</label>
+        <input type="text" id="aihe" name="aihe" required>
+
+        <label for="sahkoposti">Sähköposti:</label>
+        <input type="email" id="sahkoposti" name="sahkoposti" required>
+
+        <label for="puhelin">Puhelinnumero:</label>
+        <input type="tel" id="puhelin" name="puhelin">
+
+        <label for="viesti">Viesti:</label> 
+        <textarea id="viesti" name="viesti" rows="6" required></textarea>
+
+        <button id="lähetä"  type="submit">Lähetä viesti</button>
+
+
+
+    </form>
+    
+</body>
+</html>
