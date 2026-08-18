@@ -20,7 +20,7 @@ header{
     height: 700px;
 
     background-image:
-    linear-gradient(to right, rgb(118, 117, 117) 0%, transparent 12%, transparent 12%, black 100%),
+    linear-gradient(to right, rgb(118, 117, 117) 0%, transparent 60%, transparent 60%, rgb(131, 44, 44) 100%),
     url(kuvat/logo.png);
     background-position: center;
 
