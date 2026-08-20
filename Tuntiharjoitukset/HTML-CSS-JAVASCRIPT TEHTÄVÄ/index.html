@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+<!-- YLÄTUNNISTE -->
+
+<header>
+    <h1>Oppilashallintajärjestelmä</h1>
+</header>
+
+
+
+
+<!-- LOMAKE -->
+
+<main>
+
+    <section>
+        
+            <form id="Lomake">
+
+                <fieldset>
+
+                    <legend id="LomakkeenOtsikko">Lisää opiskelija</legend>
+
+                        <label for="etunimet">Etunimet</label>
+                        <input type="text" id="etunimet" name="etunimet" required>
+
+                        <label for="sukunimi">Sukunimi</label>
+                        <input type="text" id="sukunimi" name="sukunimi" required>
+
+                        <label for="opiskelijanumero">Opiskelijanumero</label>
+                        <input type="text" id="opiskelijanumero" name="opiskelijanumero" required>
+
+                        <label for="mail">Sähköposti</label>
+                        <input type="email" id="mail" name="mail" required>
+                        
+                        <label for="puhelinnumero">Puhelinnumero</label>
+                        <input type="tel" id="puhelinnumero" name="puhelinnumero" required>
+
+                        <label for="osoite">Katuosoite</label>
+                        <input type="text" id="osoite" name="osoite" required>
+
+                        <label for="postinumero">Postinumero</label>
+                        <input type="text" id="postinumero" name="postinumero" required>
+
+                        <label for="paikka">Postitoimipaikka</label>
+                        <input type="text" id="paikka" name="paikka" required>
+
+                        <button type="submit" id="nappi">Lisää opiskelija</button>
+
+                </fieldset>
+
+            </form>
+
+
+
+    </section>
+
+   
+
+
+        <div class="lambu">
+        <h2>Ylimääräinen JS-harjoitus. Paina tästä</h2>
+        <img id="lamppu"  src="Kuvat/lamppusam.png" alt="Sammunut lamppu">
+        </div>  
+
+    
+
+   
+
+    
+
+
+<!-- LISTA -->
+
+    <section>
+
+        <div class="Lista">
+
+        <h2 class="listaotsikko">Opiskelijat</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Etunimet</th>
+                    <th>Sukunimi</th>
+                    <th>Opiskelijanumero</th>
+                    <th>Sähköposti</th>
+                    <th>Puhelinnumero</th>
+                    <th>Katuosoite</th>
+                    <th>Postinumero</th>
+                    <th>Postitoimipaikka</th>
+                    <th>Toiminnot</th>
+
+
+                </tr>
+
+
+
+            </thead>
+        
+
+
+
+        </table>
+
+        </div>
+    </section>
+
+
+
+
+</main>
+
+
+<!-- ALATUNNISTE -->
+
+<p id="alatunniste"><em>&copy; Samuli Kivelä 2026 </em></p>
+ 
+<script src="script.js"></script>
+</body>
+</html>

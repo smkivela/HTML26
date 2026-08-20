@@ -1,3 +1,18 @@
+body [
+    margin 0;
+]
+
+header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+picture {
+    display: block;
+    width: 100%;
+}
+
 audio{
     border-radius: 1px;
     color-scheme: dark;
@@ -10,3 +25,29 @@ audio{
 video {
     max-width: 35rem;
 }
+
+picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 600px) {
+
+    picture img {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        
+    }
+
+}
+
+@media (min-width: 601px){
+
+picture img {
+    max-width: 100%;
+    margin: auto;
+}
+}
+

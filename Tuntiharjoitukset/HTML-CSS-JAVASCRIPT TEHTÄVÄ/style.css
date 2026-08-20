@@ -1,0 +1,85 @@
+
+/* HEADER */
+
+
+h1 {
+    text-align: center;
+}
+
+/* LOMAKE */
+
+form{
+   
+    width: 450px;
+    margin: 40px auto;
+    
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+input, label {
+    width: 190px;
+    align-self: center;
+}
+
+legend {
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#nappi {
+    margin-top: 30px;
+    width: 130px;
+    align-self: center;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.lambu {
+    text-align: center;
+}
+
+
+
+/* OPPILASLISTA */
+
+.Lista {
+    margin-top: 110px;
+}
+
+
+.listaotsikko {
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+
+/* ALATUNNISTE */
+
+#alatunniste {
+
+    text-align: center;
+    font-size: small;
+}
+
+
+
+
+
+ 
