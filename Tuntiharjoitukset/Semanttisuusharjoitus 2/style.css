@@ -1,11 +1,11 @@
 
 body {
-    background-color: rgb(42, 24, 12);
+    background-color: rgb(0, 0, 0);
     margin: 0;
 
     background-image:
         linear-gradient(
-            rgba(42, 24, 12, 0.98),
+            rgba(110, 94, 94, 0.98),
             rgba(245, 226, 204, 0.98)
         ),
         url("Kuvat/tausta.png");
