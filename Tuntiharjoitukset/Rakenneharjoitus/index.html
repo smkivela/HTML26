@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
 <header>
     <h1 id="pääotsikko">Portfolio Samuli Kivelä</h1>
 
-    <img src="kuvat/profiilikuva.jpg" alt="Profiilikuva Samuli Kivelä" width="350px">
+    <img src="kuvat/profiilikuva.jpg" alt="Profiilikuva Samuli Kivelä" width="350">
 
     <blockquote>
     "Without music, life would be a mistake."
@@ -24,9 +24,9 @@
     <nav class="navigointi">
         
         <ul>
-            <li><button><a href="pages/projektit.html">Projektit</a></button></li>
-            <li><button><a href="pages/yhteys.html">Ota yhteyttä</a></button></li>
-            <li><button><a href="pages/cv.html">CV</a></button></li>
+            <li><a href="pages/projektit.html">Projektit</a></li>
+            <li><a href="pages/yhteys.html">Ota yhteyttä</a></li>
+            <li><a href="pages/cv.html">CV</a></li>
             
         </ul>
 
@@ -109,8 +109,10 @@
 
             <figcaption>Samuli Kivelän audioreel vuodelta 2025</figcaption>
 
-                <video controls width="500px">
-                    <source src="videot/audioreel.mp4" type="video/mp4" >
+                <video controls width="500">
+                    <source src="videot/audioreel.mp4" type="video/mp4">
+                    <track src="tekstitykset/tekstitykset.vtt" kind="subtitles" srclang="fi" label="Suomi" default>
+                    Selaimesi ei tue tätä videoformaattia
                 </video>
 
             </figure>
@@ -127,7 +129,7 @@
 
 <footer>
 
-    <p><em>&copy Samuli Kivelä 2026</em></p>
+    <p><em>&copy; Samuli Kivelä 2026</em></p>
     <a href="mailto:sm.kivela@gmail.com">Lähetä sähköpostia</a>
 
 </footer>
