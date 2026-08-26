@@ -10,17 +10,18 @@
 
 <!-- YLÄTUNNISTE JA NAVIGOINTI -->
 
-       <header>
-    <h1>Ota yhteyttä</h1>
+<header>
+    <h1 id="pääotsikko"></h1>
 
-    <nav class="navigointi">
+        <nav class="navigointi">
         
-        <ul>
-            <li><button><a href="../index.html">Etusivulle</a></button></li>
-            <li><button><a href="projektit.html">Projektit</a></button></li>
-        </ul>
+            <ul>
+                <li><button><a href="../index.html">Etusivulle</a></button></li>
+                <li><button><a href="projektit.html">Projektit</a></button></li>
+                <li><button><a href="pages/cv.html">CV</a></button></li>
+             </ul>
 
-    </nav>
+         </nav>
 
 
 
@@ -31,26 +32,61 @@
 
     <form>
 
-        <label for="nimi">Nimi</label>
-        <input type="text" name="nimi" id="nimi">
+        <fieldset>
+            <legend>Lähetä minulle sähköpostia tällä lomakkeella</legend>
 
-        <label for="aihe">Aihe:</label>
-        <input type="text" id="aihe" name="aihe" required>
+            <fieldset>
+                <legend>Miten voin auttaa?</legend>
 
-        <label for="sahkoposti">Sähköposti:</label>
-        <input type="email" id="sahkoposti" name="sahkoposti" required>
+                <label>
+                    <input type="checkbox" name="asia" value="aanisuunnittelu">
+                    Äänisuunnittelu
+                </label>
 
-        <label for="puhelin">Puhelinnumero:</label>
-        <input type="tel" id="puhelin" name="puhelin">
+                <label>
+                    <input type="checkbox" name="asia" value="musiikkituotanto">
+                    Musiikkituotanto
+                </label>
 
-        <label for="viesti">Viesti:</label> 
-        <textarea id="viesti" name="viesti" rows="6" required></textarea>
+                <label>
+                    <input type="checkbox" name="asia" value="ohjelmointi">
+                    Ohjelmointi
+                </label>
+            </fieldset>
 
-        <button id="lähetä"  type="submit">Lähetä viesti</button>
+            <label for="nimi">Nimi</label>
+            <input type="text" name="nimi" id="nimi">
 
 
+            <fieldset>
+
+                <legend>Onko asiasi kiireellinen?</legend>
+                    <label for="yes">Kyllä</label>
+                    <input type="radio" name="kiire" id="yes">
+
+                    <label for="no">Ei</label>
+                    <input type="radio" name="kiire" id="no" checked>
+            </fieldset>
+
+            <label for="aihe">Aihe:</label>
+            <input type="text" id="aihe" name="aihe" required>
+
+            <label for="sahkoposti">Sähköposti:</label>
+            <input type="email" id="sahkoposti" name="sahkoposti" required placeholder="esimerkki@example.com">
+
+            <label for="puhelin">Puhelinnumero:</label>
+            <input type="tel" id="puhelin" name="puhelin" value="+358">
+
+            <label for="viesti">Viesti:</label> 
+            <textarea id="viesti" name="viesti" rows="6" required></textarea>
+
+            <button id="lähetä"  type="submit">Lähetä viesti</button>
+
+        </fieldset>
 
     </form>
+
+<!-- ALATUNNISTE -->
  
     
 <footer>
