@@ -11,6 +11,9 @@ const katuosoite = document.getElementById("osoite");
 const postinumero = document.getElementById("postinumero");
 const postitoimipaikka = document.getElementById("paikka");
 const nappi = document.getElementById("nappi");
+const lomakeFieldset = document.getElementById("LomakeKentta");
+
+const lomake = document.getElementById("Lomake");
 
 
 const oppilaslista = document.getElementById("oppilaslista");
@@ -18,9 +21,28 @@ let muokattavaRivi = null;
 
 // TEHDÄÄN FUNKTIOt, JOTKA LISÄÄVÄT UUDEN RIVIN TAULUKKOON NAPPIA PAINAMALLA//
 
-nappi.addEventListener("click", function() {
+lomake.addEventListener("submit", function(event) {
+    event.preventDefault();
 
-    
+if (muokattavaRivi) {
+
+    muokattavaRivi.children[0].textContent = etunimet.value;
+    muokattavaRivi.children[1].textContent = sukunimi.value;
+    muokattavaRivi.children[2].textContent = opiskelijanumero.value;
+    muokattavaRivi.children[3].textContent = sähköposti.value;
+    muokattavaRivi.children[4].textContent = puhelinnumero.value;
+    muokattavaRivi.children[5].textContent = katuosoite.value;
+    muokattavaRivi.children[6].textContent = postinumero.value;
+    muokattavaRivi.children[7].textContent = postitoimipaikka.value;
+
+    muokattavaRivi = null;
+    nappi.textContent = "Lisää opiskelija";
+    lomake.reset();
+    lomakeFieldset.classList.remove("muokkaus");
+
+    return;
+}
+
     
     const uusirivi = document.createElement("tr")
     
@@ -61,6 +83,9 @@ nappi.addEventListener("click", function() {
 
     oppilaslista.appendChild(uusirivi);
 
+    // LOMAKKEEN TYHJENTÄMINEN //
+    lomake.reset();
+
     // MUOKKAA-NAPPI //
     
     const toiminnotSolu = document.createElement("td");
@@ -72,33 +97,9 @@ nappi.addEventListener("click", function() {
     
     muokkaaNappi.addEventListener("click", function() {
 
-        if (muokattavaRivi) {
-
-            muokattavaRivi.children[0].textContent = etunimet.value;
-            muokattavaRivi.children[1].textContent = sukunimi.value;
-            muokattavaRivi.children[2].textContent = opiskelijanumero.value;
-            muokattavaRivi.children[3].textContent = sähköposti.value;
-            muokattavaRivi.children[4].textContent = puhelinnumero.value;
-            muokattavaRivi.children[5].textContent = katuosoite.value;
-            muokattavaRivi.children[6].textContent = postinumero.value;
-            muokattavaRivi.children[7].textContent = postitoimipaikka.value;
-
-            nappi.textContent = "Lisää opiskelija";
-            muokattavaRivi = null;
-
-            etunimet.value = "";
-            sukunimi.value = "";
-            opiskelijanumero.value = "";
-            sähköposti.value = "";
-            puhelinnumero.value = "";
-            katuosoite.value = "";
-            postinumero.value = "";
-            postitoimipaikka.value = "";
-
-            return;
-        }
+       
     
-        const muokattavaRivi = muokkaaNappi.closest("tr");
+        muokattavaRivi = muokkaaNappi.closest("tr");
         const etunimetSolu = muokattavaRivi.children[0];
         const sukunimiSolu = muokattavaRivi.children[1];
         const opiskelijanumeroSolu = muokattavaRivi.children[2];
@@ -119,8 +120,12 @@ nappi.addEventListener("click", function() {
     
         
         nappi.textContent = "Tallenna muutokset";
+        lomakeFieldset.classList.add("muokkaus");
         
-        oppilaslista.removeChild(muokattavaRivi);
+        // NAPISTA HYPÄTÄÄN TAKAISIN LOMAKKEESEEN //
+
+        lomake.scrollIntoView({ behavior: "smooth" });
+        
     });
 });
 
@@ -131,20 +136,6 @@ nappi.addEventListener("click", function() {
 
 
 
-// LAMPPUTREENI //
-
-const lamppu = document.getElementById("lamppu")
-
-lamppu.addEventListener("click", function() {
-
-    if (lamppu.src.includes("Kuvat/lamppusam.png")) {
-        lamppu.src = "Kuvat/lamppusyt.png";
-    } else {
-        lamppu.src = "Kuvat/lamppusam.png";
-    }
-
-
-});
 
 
 

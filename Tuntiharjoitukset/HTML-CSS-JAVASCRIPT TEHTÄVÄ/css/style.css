@@ -1,9 +1,28 @@
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ecf2f8;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 /* HEADER */
 
 
 h1 {
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    
+}
+
+header {
+    background-color: #dcf7ff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 /* LOMAKE */
@@ -19,6 +38,7 @@ fieldset {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    background-color: #f6f5f1;
     
 }
 
@@ -39,10 +59,23 @@ legend {
     align-self: center;
     padding: 15px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(61, 1, 1, 0.3);
 }
 
 .lambu {
     text-align: center;
+    img {
+        width: 100px;
+        height: auto;
+        cursor: pointer;
+        background-color: #ffdce8;
+    }
+}
+
+#LomakeKentta.muokkaus {
+    background-color: #fcfcfb;
+    border: 2px solid #f90000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
 }
 
 
@@ -64,6 +97,7 @@ table {
     margin: 0 auto;
     border-collapse: collapse;
     max-width: 100%;
+    background-color: #f9f9f9;
 
 
 }
