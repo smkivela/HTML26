@@ -12,6 +12,7 @@ const postinumero = document.getElementById("postinumero");
 const postitoimipaikka = document.getElementById("paikka");
 const nappi = document.getElementById("nappi");
 const lomakeFieldset = document.getElementById("LomakeKentta");
+const legend = document.getElementById("LomakkeenOtsikko");
 
 const lomake = document.getElementById("Lomake");
 
@@ -37,6 +38,7 @@ if (muokattavaRivi) {
 
     muokattavaRivi = null;
     nappi.textContent = "Lisää opiskelija";
+    legend.textContent = "Lisää opiskelija";
     lomake.reset();
     lomakeFieldset.classList.remove("muokkaus");
 
@@ -93,6 +95,9 @@ if (muokattavaRivi) {
     muokkaaNappi.textContent = "Muokkaa";
     toiminnotSolu.appendChild(muokkaaNappi);
     uusirivi.appendChild(toiminnotSolu);
+
+    // LUODAAN NAPILLE LUOKKA CSS:ÄÄ VARTEN //
+    muokkaaNappi.classList.add("muokkaaNappi");
     
     
     muokkaaNappi.addEventListener("click", function() {
@@ -125,8 +130,31 @@ if (muokattavaRivi) {
         // NAPISTA HYPÄTÄÄN TAKAISIN LOMAKKEESEEN //
 
         lomake.scrollIntoView({ behavior: "smooth" });
-        
+
+        // NAPPI MUUTTAA LEGENDIN TEKSTIN //
+
+        legend.textContent = "Muokkaa opiskelijan tietoja";
+
     });
+
+    // POISTA-NAPPI //
+    const poistaNappi = document.createElement("button");
+    poistaNappi.textContent = "Poista opiskelija";
+    toiminnotSolu.appendChild(poistaNappi);
+
+    poistaNappi.addEventListener("click", function() {
+        const poistettavaRivi = poistaNappi.closest("tr");
+        const vahvistus = confirm("Haluatko varmasti poistaa opiskelijan?");
+        if (vahvistus) {
+            oppilaslista.removeChild(poistettavaRivi);
+        }
+       
+    });
+    
+    // LUODAAN NAPILLE LUOKKA CSS:ÄÄ VARTEN //
+
+    poistaNappi.classList.add("poistaNappi");
+    
 });
 
 
