@@ -1,0 +1,1 @@
+Tein kolmosharjoituksen "Semanttisuusharjoitus 2" -tehtävään. Eli tein sinne SEO-auditoinnin.
