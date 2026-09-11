@@ -1,0 +1,16 @@
+#lamppu {
+    fill: rgb(250, 242, 230);
+}
+
+#lamppu.päällä {
+    fill: yellow;
+}
+
+#hehkue.päällä {
+    opacity: 0.4;
+}
+
+#lanka.päällä {
+    stroke: rgb(255, 72, 0);
+    stroke-width: 3px;
+}
