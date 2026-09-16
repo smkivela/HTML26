@@ -1,0 +1,22 @@
+.post > h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    
+}
+
+.post > h2 + p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(108, 9, 9);
+}
+
+.post p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 15px;
+}
+
+/* 
+
+Ylläolevien selektorien erot: > tarkoittaa että vain post-luokan artikkelin h2:t tyylitellään. + p tarkoittaa että h2:sta seuraava p tyylitellään. 
+Alimmainen tarkoittaa että post-luokan artikkelin sisällä olevat p:t tyylitellään
+
+*/

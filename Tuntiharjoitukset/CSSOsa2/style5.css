@@ -1,0 +1,60 @@
+@layer base, components, utilities;
+
+@layer base {
+
+}
+
+@layer components {
+
+:where(.button) {
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+:where(.kortti) {
+
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+
+}
+
+:where(.varoitus) {
+    background-color: lightyellow;
+    padding: 15px;
+    border: 1px solid orange;
+    border-radius: 8px;
+    
+}
+
+.button:hover {
+    background-color: chartreuse;
+}
+
+.button:focus-visible {
+    background-color: chartreuse;
+}
+
+}
+
+@layer utilities {
+
+.button.vaara {
+    background-color: rgb(228, 10, 10);
+}
+
+.kortti.korostettu {
+    text-decoration: underline;
+}
+
+.varoitus.onnistuminen {
+    color: rgb(0, 0, 0);
+    background-color: rgb(141, 255, 80);
+}
+
+}
+
+
+
+
