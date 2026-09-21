@@ -1,0 +1,192 @@
+/* CSS-kokonaisharjoitus, osa 4 */
+
+/* Aloita CSS:n kirjoittaminen tämän kommentin alta. */
+
+* {
+    box-sizing: border-box;
+}
+
+#main-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+body {
+
+background-color: rgb(244, 235, 220);
+}
+
+a[href="#cards"] {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.site-header {
+    width: 100%;
+    position: relative;
+    min-height: 240px;
+    margin: 20px 0;
+    padding: 20px 40px;
+    border: 2px double rgb(246, 236, 236);
+    border-radius: 30px;
+
+    background: linear-gradient(
+        90deg,
+        rgb(246, 236, 236),
+        #a5bbd8 20%,
+        #e7c9b6 80%,
+        rgb(246, 236, 236) 100%
+    );
+}
+
+.skip-link {
+    position: fixed;
+    left: -9999px;
+    top: 20px;
+}
+
+.skip-link:focus {
+    left: 20px;
+    z-index: 1000;
+}
+
+.nav-list a, .brand {
+    text-decoration: none;
+    color: black;
+}
+
+
+.nav-list {
+
+    position: absolute;
+    top: 30px;
+    right: 190px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+    display: block;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    text-shadow: 4px 2px 4px gray;
+    transition: text-shadow 0.2s ease;
+ 
+}
+
+.nav-list li {
+    margin-top: 20px;
+}
+
+
+.nav-list a:active {
+    transform: translateY(3px);
+}
+
+h1, h2, p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+.tietoa {
+    text-align: center;
+}
+
+.site-footer {
+    text-align: center;
+}
+
+.hero {
+    text-align: center;
+}
+
+.card {
+    border: 3px double black;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto 0;
+    padding: 20px;
+    background-color: rgb(227, 227, 250);
+}
+
+
+
+.brand {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);  
+    color: black;
+    border-radius: 50%;
+
+    line-height: 40px;
+    padding: 10px 20px;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3rem;
+    text-decoration: none;
+
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+
+    background: linear-gradient(
+        to top,
+        #d8c3a5 0%,
+        #d8c3a5 100%
+    );
+
+    background-size: 100% 0%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    transition: background-size 0.5s ease-in;
+}
+
+/* BRÄNDIN HOVER */
+
+.brand:hover {
+    background-size: 100% 100%;
+    animation: pyorahdys 5s ease;
+}
+
+/* NAVIGAATION HOVER*/
+
+.nav-list a:hover {
+    text-shadow: 2px 2px 6px #d8c3a5;
+}
+
+/* MOBIILINÄKYMÄ */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        min-height: 300px;
+    }
+
+    .brand {
+        top: 35%;
+    }
+
+    .nav-list {
+        right: 0;
+        top: auto;
+        bottom: 30px;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .nav-list li {
+        margin-top: 15px;
+    }
+}
