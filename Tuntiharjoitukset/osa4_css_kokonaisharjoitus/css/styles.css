@@ -55,6 +55,7 @@ a[href="#cards"] {
 .nav-list a, .brand {
     text-decoration: none;
     color: black;
+    display: inline-block;
 }
 
 
@@ -127,7 +128,6 @@ h1{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);  
-    color: black;
     border-radius: 50%;
 
     line-height: 40px;
@@ -135,7 +135,6 @@ h1{
 
     font-family: "Bebas Neue", sans-serif;
     font-size: 3rem;
-    text-decoration: none;
 
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 
@@ -156,7 +155,6 @@ h1{
 
 .brand:hover {
     background-size: 100% 100%;
-    animation: pyorahdys 5s ease;
 }
 
 /* NAVIGAATION HOVER*/
