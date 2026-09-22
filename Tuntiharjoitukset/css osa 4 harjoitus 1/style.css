@@ -1,0 +1,20 @@
+.box {
+    display: inline;
+    width: 400px;
+    padding: 20px 40px;
+    background-color: cadetblue;
+}
+
+.block {
+    display: block;
+    width: 400px;
+    padding: 20px 40px;
+    background-color: cadetblue;
+}
+
+.inlineblock {
+    display: inline-block;
+    width: 400px;
+    padding: 20px 40px;
+    background-color: cadetblue;
+}

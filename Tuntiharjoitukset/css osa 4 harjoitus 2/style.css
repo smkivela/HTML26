@@ -1,0 +1,45 @@
+header {
+    background-color: blanchedalmond;
+    height: 100px;
+    position: relative;
+    
+}
+
+.navi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+
+.navi li {
+    display: inline-block;
+    margin: 30px;
+    
+}
+
+nav a:hover {
+    background-color: rgba(169, 228, 92, 0.4);
+    text-shadow: 2px 2px 4px gray;
+}
+
+nav a{
+    padding: 15px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.9s ease;
+}
+
+.active {
+    text-decoration: double;
+    font-size: 20px;
+    font-weight: bold;
+}
+
