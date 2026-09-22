@@ -1,3 +1,149 @@
 /* CSS-kokonaisharjoitus, osa 5 */
 
 /* Aloita CSS:n kirjoittaminen tämän kommentin alta. */
+
+.skip-link {
+    visibility: hidden;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(
+        500deg,
+        white,
+        #94945e
+    );
+    font-family: serif;
+    color: rgb(57, 13, 13);
+}
+
+.hero {
+    text-align: center;
+    position: static;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: monospace;
+}
+
+a[href="#cards"] {
+    font-weight: bold;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background-color: rgba(251, 191, 184, 0.75);
+    backdrop-filter: blur(10px);
+
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.3rem;
+    height: 150px;
+    padding-top: 50px;
+}
+.lorem {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    font-style: oblique;
+    font-size: 30px;
+}
+
+.brand {
+    display: inline-block;
+    margin-right: 100px;
+}
+
+nav {
+    display: inline-block;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.nav-list li {
+    display: inline;
+    margin-left: 20px;
+    margin: 40px;
+}
+
+.site-header a {
+    text-decoration: none;
+    transition: all 0.23s;
+    color: black;
+    font-family: monospace;
+
+}
+
+.site-header a:hover {
+    color: rgb(255, 64, 0);
+    text-shadow: 2px 2px 4px gray;
+    font-size: 1.6rem;
+}
+
+.card {
+    border: 3px dotted rgb(20, 18, 18, 0.2);
+    width: 300px;
+    display: inline-block;
+    background-color: antiquewhite;
+    overflow: hidden;
+    margin: 10px;
+    padding: 25px;
+    position: relative;
+}
+.card--featured {
+    border: 3px dotted red;
+    transform: scale(1.1);
+}
+
+.card__badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: brown;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 999px;
+}
+
+.site-footer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+#cards {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: aliceblue;
+    text-decoration: none;
+    transition: all 0.3s;
+    color: black;
+}
+
+
+.button:hover {
+    background-color: burlywood;
+    color: brown;
+}
+
+.button:active {
+    transform: translateY(3px);
+    background-color: bisque;
+}
+
