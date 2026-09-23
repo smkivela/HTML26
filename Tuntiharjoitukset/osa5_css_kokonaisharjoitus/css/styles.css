@@ -26,10 +26,15 @@ body {
 h1 {
     font-size: 3rem;
     font-family: monospace;
+    margin-top: 100px;
 }
 
 a[href="#cards"] {
     font-weight: bold;
+}
+
+.button.button--primary {
+    background-color: rgb(163, 247, 182);
 }
 
 .site-header {
@@ -124,6 +129,7 @@ nav {
 
 #cards {
     text-align: center;
+    margin-top: 300px;
 }
 
 .button {
@@ -146,4 +152,5 @@ nav {
     transform: translateY(3px);
     background-color: bisque;
 }
+
 
