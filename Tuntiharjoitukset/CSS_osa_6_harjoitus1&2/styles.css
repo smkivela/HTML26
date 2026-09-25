@@ -1,0 +1,35 @@
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    background-color: rgb(251, 234, 180);
+    color: black;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.login {
+    margin-inline-start: auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card {
+    flex: 1 1 16rem;
+    border: 1px dotted black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(255, 253, 247);
+    hyphens: auto;
+}
