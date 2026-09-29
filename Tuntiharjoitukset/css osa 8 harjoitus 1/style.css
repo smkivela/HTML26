@@ -132,7 +132,6 @@ h1 {
 
 .feature-card {
     padding: 30px;
-
     background: white;
 
     border-radius: 10px;
@@ -199,7 +198,7 @@ h1 {
 
 @media (width >=48rem) {
 
-    .features {
+    .feature-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
