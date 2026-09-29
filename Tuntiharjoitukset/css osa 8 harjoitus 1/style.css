@@ -1,0 +1,251 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f1ec;
+    color: #171717;
+
+    line-height: 1.5;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+/* HERO */
+
+.hero {
+
+    padding: 80px 20px;
+
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.hero-content {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+.eyebrow {
+    margin: 0 0 15px;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+}
+
+
+/*
+   clamp
+
+   
+    2rem = otsikko ei mene tätä pienemmäksi
+    vw = otsikko kasvaa viewportin mukana
+    5rem = otsikko ei kasva tätä suuremmaksi
+*/
+
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+
+.hero-text {
+    max-width: 600px;
+    margin: 30px 0;
+    font-size: 1.1rem;
+}
+
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+
+    padding: 14px 22px;
+
+    background: #171717;
+    color: white;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+
+.button:hover {
+    opacity: 0.8;
+}
+
+
+.features {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 30px;
+}
+
+
+.features h2 {
+    max-width: 900px;
+
+    margin: 0 auto 35px;
+
+    font-size: 2rem;
+}
+
+
+/*
+   Mobile-first:
+
+   Gridissä on oletuksena yksi sarake.
+
+*/
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.feature-card {
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 10px;
+}
+
+
+.feature-number {
+    display: block;
+
+    margin-bottom: 40px;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+.feature-card h3 {
+    margin: 0 0 10px;
+
+    font-size: 1.5rem;
+}
+
+
+.feature-card p {
+    margin: 0;
+
+    color: #555;
+}
+
+
+/* CTA */
+
+.cta {
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background: #171717;
+    color: white;
+}
+
+
+.cta h2 {
+    margin: 0 0 15px;
+
+    font-size: 2rem;
+}
+
+
+.cta p {
+    margin: 0 auto 30px;
+
+    max-width: 500px;
+}
+
+
+.button-light {
+    background: white;
+    color: #171717;
+}
+
+
+
+
+@media (width >=48rem) {
+
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* LISÄÄ BREAKPOINTEJA HALUTESSAAN:
+
+
+
+@media (min-width: 900px) {
+
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    .hero {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+
+    .features {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+
+    .hero {
+        min-height: 600px;
+    }
+
+
+    .feature-grid {
+        gap: 30px;
+    }
+
+
+    .feature-card {
+        padding: 40px;
+    }
+
+}
+
+*/

@@ -1,0 +1,17 @@
+/* CSS-kokonaisharjoitus, osa 7 */
+
+/* Aloita CSS:n kirjoittaminen tämän kommentin alta. */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-template-rows: auto;
+}
