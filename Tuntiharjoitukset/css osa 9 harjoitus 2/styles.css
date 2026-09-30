@@ -1,0 +1,57 @@
+.hero {
+    height: 600px;
+    background-color: black;
+    position: relative;
+        background-image:
+        linear-gradient(to right, black 0%, transparent 80%, transparent 20%, black 100%),
+        url(kuvat/herotausta.jpg);
+    background-position: center 20%;
+    background-size: cover;
+
+}
+
+
+
+
+.importanttext {
+    transform: translateY(70px);
+    background: linear-gradient(to right, rgb(190, 148, 105), rgb(248, 247, 246));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-family: monospace;
+    letter-spacing: 15px;
+    font-size: 2.5rem;
+}
+
+.cta {
+    position: absolute;
+    left: 70px;
+    bottom: 30px;
+
+    padding: 12px 24px;
+    background: rgb(241, 206, 164);
+    color: black;
+    font-family: monospace;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0 0 15px white;
+    transition: all 0.5s;
+}
+
+.cta:hover {
+
+    box-shadow: 0 0 50px rgb(236, 233, 204);
+    scale: 1.1;
+
+}
+
+@media (max-width: 600px) {
+    .cta {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 30px;
+    }
+}

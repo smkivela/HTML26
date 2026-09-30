@@ -1,0 +1,50 @@
+:root {
+    --bg: #e5dfcf;
+    --surface: #f7f6e4;
+    --text: #222222;
+    --accent: #3366ff;
+    --danger: #dd3333;
+}
+
+.dark {
+    --bg: #222222;
+    --surface: #333333;
+    --text: #f5f5f5;
+    --accent: #6699ff;
+    --danger: #ff5555;
+}
+
+.card {
+    background-color: var(--surface);
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.varoitus {
+    color: var(--danger);
+}
+
+.painike {
+    color: var(--accent);
+    
+}
+
+p {
+    color: var(--text);
+}
+
+.korttisektio {
+    text-align: center;
+}
+
+#themeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
