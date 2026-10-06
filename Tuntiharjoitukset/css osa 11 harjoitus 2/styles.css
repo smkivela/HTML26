@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(black, rgb(64, 2, 2)) no-repeat;
+    background-size: cover;
+}
+
+.button {
+    display: block;
+    margin: 50px auto;
+    padding: 10px 20px;
+
+    background-color: #f6e5de;
+    color: rgb(64, 2, 2);
+
+    border: 1px solid rgba(10, 8, 8, 0.5);
+    border-radius: 10px;
+
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    background-color: #f6e5de;
+    color: rgb(64, 2, 2);
+    border: 1px solid rgb(64, 2, 2);
+
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(242, 239, 239 , 0.8);
+}
+
+.button:focus-visible {
+    background-color: #f6e5de;
+    color: rgb(64, 2, 2);
+    border: 1px solid rgb(64, 2, 2);
+
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgb(242, 239, 239);
+}
+
+.button:active {
+    background-color: rgb(254, 246, 246);
+    color: rgb(67, 1, 1);
+    border: 1px solid rgb(250, 214, 214);
+
+    transform: scale(0.95);
+
+    box-shadow: 0 0 20px white;
+    text-shadow: 0 0 20px white;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
