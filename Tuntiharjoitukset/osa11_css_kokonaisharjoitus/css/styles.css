@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
 
   background:
-    radial-gradient(circle at top, #df9999 0%, #170606 45%, #080303 100%);
+    radial-gradient(circle at top, #493f73 0%, #170606 45%, #2c2a2a 100%);
 
   color: #f8eeee;
 
@@ -364,6 +364,10 @@ h1 {
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.35),
     0 0 25px rgba(255, 120, 120, 0.15);
+}
+
+.card--featured:hover {
+  border-color: #f5b427;
 }
 
 .card__badge {
