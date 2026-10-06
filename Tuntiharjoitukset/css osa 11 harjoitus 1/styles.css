@@ -33,6 +33,13 @@
     margin: 50px auto;
     min-height: 350px;
     font-family: var(--text-font);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(19, 20, 19, 0.7);
+    color: var(--primary-color);
 }
 
 p {

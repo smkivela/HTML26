@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-animaatiot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main>
+
+        <!-- Sisääntuloanimaatio -->
+        <article class="card" tabindex="0">
+            <h2 class="card__title">Nouseva kortti hoverissa</h2>
+
+            <p class="card__text">
+                Kortti nousee ja kirkastuu hoverissa.
+                Myös focus-visible toimii.
+            </p>
+        </article>
+
+
+        <!-- Spinner -->
+        <div class="loading">
+            <span class="spinner" aria-hidden="true"></span>
+            <span>Ladataan<span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span>
+        </div>
+
+
+        <!-- Attention-pulse -->
+        <details class="notification">
+            <summary>Uusi ilmoitus! Paina lukeaksesi.</summary>
+            <p>Tässä on ilmoituksen lisätiedot.</p>
+        </details>
+
+    </main>
+
+</body>
+
+</html>
