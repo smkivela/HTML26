@@ -1,0 +1,70 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" fill="none">
+  <defs>
+    <linearGradient id="waveGradient" x1="150" y1="150" x2="1050" y2="750" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4338ca"/>
+      <stop offset="0.5" stop-color="#7564c8"/>
+      <stop offset="1" stop-color="#243b64"/>
+    </linearGradient>
+
+    <linearGradient id="secondaryGradient" x1="200" y1="750" x2="1000" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#243b64"/>
+      <stop offset="0.55" stop-color="#b6c236"/>
+      <stop offset="1" stop-color="#c22303"/>
+    </linearGradient>
+  </defs>
+
+ 
+  <path
+    d="M 600 450
+       C 600 160, 1010 160, 1010 450
+       C 1010 740, 600 740, 600 450
+       C 600 160, 190 160, 190 450
+       C 190 740, 600 740, 600 450"
+    stroke="url(#waveGradient)"
+    stroke-width="2"
+    opacity="0.65"
+  />
+
+  <path
+    d="M 600 450
+       C 850 450, 850 200, 600 200
+       C 350 200, 350 700, 600 700
+       C 850 700, 850 450, 600 450
+       C 350 450, 350 200, 600 200
+       C 850 200, 850 700, 600 700"
+    stroke="url(#secondaryGradient)"
+    stroke-width="1.6"
+    opacity="0.48"
+  />
+
+  <!-- Fine harmonic traces -->
+  <path
+    d="M 120 450
+       C 120 330, 240 330, 240 450
+       S 360 570, 360 450
+       S 480 330, 480 450
+       S 600 570, 600 450
+       S 720 330, 720 450
+       S 840 570, 840 450
+       S 960 330, 960 450
+       S 1080 570, 1080 450"
+    stroke="#ca6638"
+    stroke-width="1"
+    opacity="0.32"
+  />
+
+  <!-- Subtle outer orbit -->
+  <ellipse
+    cx="600"
+    cy="450"
+    rx="480"
+    ry="300"
+    stroke="#243b64"
+    stroke-width="1"
+    opacity="0.18"
+  />
+
+  <!-- Center point -->
+  <circle cx="600" cy="450" r="4" fill="#4338ca" opacity="0.55"/>
+</svg>
