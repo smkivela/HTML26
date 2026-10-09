@@ -1,0 +1,176 @@
+/*
+  HARJOITUKSEN ALOITUSTIEDOSTO
+  ---------------------------
+  Tässä CSS:ssä toistetaan tarkoituksella samoja arvoja.
+
+  Tehtävä:
+  1. Etsi toistuvat värit, välit ja pyöristykset.
+  2. Luo :rootiin semanttiset tokenit ja korvaa toistuvat arvot var()-kutsuilla.
+  3. Lisää tumma teema vaihtamalla vain tokenien arvoja.
+  4. Haaste: tee typografia ja section-spacing fluidiksi clamp()-funktiolla.
+
+  Älä muuta HTML:ää ensimmäisiä kolmea vaihetta varten.
+*/
+
+
+:root {
+  --pääväri: radial-gradient(circle, #7c3aed 0%, #7328b9 100%);
+  --valkoinen: #ffffff;
+  --vaaleatausta: #f8fafc;
+  --tumma-tausta: #1e293b;
+  --secondary-väri: #6d28d9;
+  --aksentti-väri: radial-gradient(circle, #dc2626 0%, #b91c1c 100%);
+  --aksentti-väri-hover: #b91c1c;
+  --huomio: #475569;
+  --korttiraja: #e2e8f0;
+  --peruskoko: 1rem;
+  --pyöristys: 0.75rem;
+  --pyöristys-pill: 999px;
+
+}
+
+.dark {
+  --pääväri: #7c3aed;
+  --valkoinen: #ffffff;
+  --dark-tausta: #1e293b;
+  --light-tausta: #f8fafc;
+  --secondary-väri: #6d28d9;
+  --aksentti-väri: #dc2626;
+  --aksentti-väri-hover: #b91c1c;
+  --huomio: #a5cbb0;
+  --korttiraja: #92a2b9;
+}
+ 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--vaaleatausta);
+  color: var(--tumma-tausta);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(100% - 2rem, 70rem);
+  margin-inline: auto;
+}
+
+.hero {
+  background: var(--pääväri);
+  color: var(--valkoinen);
+  padding: 4rem var(--peruskoko);
+}
+
+.hero h1 {
+  margin: 0 0 var(--peruskoko);
+  font-size: clamp(3rem, 5vw, 6rem);
+  line-height: 1.1;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.lead {
+  max-width: 48rem;
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.intro {
+  padding: clamp(2rem, 5vw, 4rem) 0 clamp(1rem, 3vw, 2rem);
+}
+
+.intro h2,
+.notice h2 {
+  margin-top: 0;
+  color: var(--pääväri);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--peruskoko);
+  padding: 2rem 0 4rem;
+}
+
+.card {
+  background: var(--valkoinen);
+  border: 1px solid var(--korttiraja);
+  border-radius: var(--pyöristys);
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgb(15 23 42 / 0.08);
+}
+
+.card h2 {
+  margin: var(--peruskoko) 0 0.5rem;
+  color: var(--tumma-tausta);
+}
+
+.card p {
+  margin: 0 0 1.5rem;
+  color: var(--tumma-tausta);
+}
+
+.card--important {
+  border: 2px solid var(--pääväri);
+}
+
+.badge {
+  display: inline-block;
+  background: var(--vaaleatausta);
+  color: var(--secondary-väri);
+  border-radius: var(--pyöristys-pill);
+  padding: 0.5rem var(--peruskoko);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.button {
+  display: inline-block;
+  background: var(--pääväri);
+  color: var(--valkoinen);
+  border-radius: var(--pyöristys);
+  padding: 0.5rem var(--peruskoko);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button:hover {
+  background: var(--secondary-väri);
+}
+
+.button--accent {
+  background: var(--aksentti-väri);
+}
+
+.button--accent:hover {
+  background: var(--aksentti-väri-hover);
+}
+
+.notice {
+  margin-bottom: 4rem;
+  background: var(--valkoinen);
+  border-left: 5px solid var(--pääväri);
+  border-radius: var(--pyöristys);
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgb(15 23 42 / 0.08);
+}
+
+.notice p {
+  margin-bottom: 0;
+  color: var(--huomio);
+}
+
+footer {
+  background: var(--tumma-tausta);
+  color: var(--valkoinen);
+  padding: 2rem 1rem;
+  text-align: center;
+}

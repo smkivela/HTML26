@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Rekisteröitymislomake</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Rekisteröitymislomake">
+    <meta name="keywords" content="rekisteröityminen, lomake, sähköposti, salasana">
+    
+</head>
+<body>
+
+    <form action="#" method="post" class="registration-form">
+
+    <div class="field">
+        <label for="email">Sähköposti</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            required>
+    </div>
+
+    <div class="field">
+        <label for="password">Salasana</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="8"
+            required>
+    </div>
+
+    <div class="field">
+        <label for="password-confirm">Vahvista salasana</label>
+        <input
+            type="password"
+            id="password-confirm"
+            name="password-confirm"
+            minlength="8"
+            required>
+    </div>
+
+    <div class="check">
+        <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            required>
+        <label for="terms">Hyväksyn ehdot</label>
+    </div>
+
+    <button type="submit" class="submit-button">Lähetä</button>
+
+</form>
+
+    
+</body>
+</html>

@@ -1,0 +1,275 @@
+/* CSS-kokonaisharjoitus, osa 14 */
+
+/* Aloita CSS:n kirjoittaminen tämän kommentin alta. */
+
+:root {
+    --pääväri: radial-gradient(circle, #4d4027 50%, #0f2006 100%);
+    --text-väri: #f7f8f8;
+
+    --aksentti-väri: radial-gradient(
+        circle,
+        #dc2626 0%,
+        #b91c1c 100%
+    );
+
+    --aksentti-väri-hover: #b91c1c;
+    --huomio: #475569;
+    --korttiraja: #cfb7b0;
+
+    --header-tausta: linear-gradient(
+        135deg,
+        #4a5a53 0%,
+        #153729 100%
+    );
+
+    --kortti-tausta: linear-gradient(
+        135deg,
+        #faf8f3 0%,
+        #edf3ee 100%
+    );
+
+    --footer-tausta: linear-gradient(
+        135deg,
+        #1e4134 0%,
+        #04110c 100%
+    );
+
+    --marginaali: 8rem;
+
+    --pääfontti: mono, monospace;
+
+    --brand-background: radial-gradient(
+        circle,
+        rgba(233, 235, 225, 0.15) 0%,
+        rgba(161, 212, 162, 0.1) 100%
+    );
+
+    --teksi-tausta: rgba(0, 0, 0, 0.5);
+
+    --teksti-tausta-margin: 7rem;
+
+    --teksti-tausta-border-radius: 3rem;
+}
+
+
+/* Kaikki elementit */
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Piilotetaan skip-linkit */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    z-index: 1000;
+}
+
+
+.skip-link:focus {
+    top: 0;
+}
+
+
+/* Header */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--header-tausta);
+
+    padding: 1rem;
+
+    width: 100%;
+
+    border-bottom: 1px solid var(--korttiraja);
+}
+
+
+
+/* Body */
+
+.hero {
+    background: var(--teksi-tausta);
+    padding: 15px;
+    margin: var(--teksti-tausta-margin);
+    border-radius: var(--teksti-tausta-border-radius);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+body {
+
+    font-family: var(--pääfontti);
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    color: var(--text-väri);
+
+    position: relative;
+}
+
+h1 {
+    font-size: clamp(3.2rem, 4vw, 5rem);
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(247, 244, 238, 0.1),
+            rgba(221, 240, 211, 0.85)
+        ),
+        url("../images/codebg.jpg") center / cover;
+
+    filter: blur(4px);
+
+    transform: scale(1.03);
+
+    z-index: -1;
+}
+
+main {
+    flex: 1;
+}
+
+
+/* Navigaatio */
+
+li {
+    list-style: none;
+}
+
+.nav-list {
+    display: flex;
+    gap: 1rem;
+    margin-right: 7rem;
+    font-size: clamp(0.5rem, 2vw, 1.1rem);
+    
+}
+
+.nav-list li a {
+    display: inline-block;
+
+    color: var(--text-väri);
+    text-decoration: none;
+
+    transition: transform 0.5s, text-shadow 0.5s;
+
+}
+
+.nav-list li a:hover {
+    text-shadow: 0 0 20px rgb(105, 159, 25);
+    transform: translateY(2px);
+}
+
+a[aria-current="page"] {
+    font-weight: bold;
+}
+
+/* Brändi */
+
+.brand {
+    display: flex;
+    margin-left: var(--marginaali);
+    background: var(--brand-background);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-väri);
+    text-decoration: none;
+    transition: background 0.5s, text-shadow 0.5s, color 0.5s, transform 0.5s;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+.brand:hover {
+    text-shadow: 0 0 20px rgb(10, 10, 1);
+    background: radial-gradient(
+        circle,
+        rgba(226, 236, 162, 0.4) 0%,
+        rgba(225, 241, 225, 0.3) 100%
+    );
+    color: rgb(227, 243, 227);
+    transform: translateY(-3px);
+}
+
+
+/* Kortit */
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 400px));
+    gap: 1rem;
+    justify-content: center;
+}
+
+#cards {
+    padding: 1rem;
+    background: var(--teksi-tausta);
+    margin: var(--teksti-tausta-margin);
+    border-radius: var(--teksti-tausta-border-radius);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+}
+
+.card {
+    background: rgba(250, 248, 243, 0.65);
+
+    overflow: hidden;
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    border: 1px solid rgba(207, 183, 176, 0.7);
+    border-radius: 0.5rem;
+
+    padding: 1rem;
+
+    text-align: left;
+
+    box-shadow: 0 4px 12px rgba(11, 55, 37, 0.08);
+}
+
+.help-button {
+    background-color: var(--aksentti-väri);
+    max-width: 30px;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+
+
+
+/* Footer */
+
+.site-footer {
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+
+    background: var(--footer-tausta);
+
+    border-top: 1px solid var(--korttiraja);
+}
+
+/* queryt */
+
+@media (max-width: 850px) {
+    .card-list {
+        grid-template-columns: minmax(0, 400px);
+    }
+}

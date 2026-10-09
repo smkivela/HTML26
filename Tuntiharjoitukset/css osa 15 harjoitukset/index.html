@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painikejärjestelmä ja lomakekortti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <h1>Saavutettava käyttöliittymä</h1>
+        <p>Saavutettavia käyttöliittymätiloja.</p>
+    </header>
+
+    <main class="pääsisältö">
+
+        <section aria-labelledby="nappiotsikko" class="nappiosio">
+            <h2 id="nappiotsikko">Painikkeet</h2>
+            <p>
+                Painikkeita voi käyttää hiirellä tai näppäimistöllä.
+            </p>
+
+            <div class="nappiluokka">
+                <button class="button button-primary" type="button">
+                    Tärkeä painike
+                </button>
+
+                <button class="button button-secondary" type="button">
+                    Vähemmän tärkeä painike
+                </button>
+
+                <button class="button button-primary" type="button" disabled>
+                    Ei käytettävissä
+                </button>
+            </div>
+
+        </section>
+
+        <section aria-labelledby="lomakeotsikko" class="lomakeosio">
+            <h2 id="lomakeotsikko">Yhteydenottolomake</h2>
+            <p id="form-help">
+                Tähdellä merkityt kentät ovat pakollisia.
+            </p>
+
+            <form>
+                <div class="field">
+                    <label for="name">Nimi *</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="name"
+                        required
+                        aria-describedby="name-help"
+                        placeholder="Eerik Esimerkki">
+                        <small id="name-help">Kirjoita koko nimesi.</small>
+                </div>
+
+                <div class="field">
+                    <label for="email">Sähköpostiosoite *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                        aria-describedby="email-help"
+                        placeholder="esimerkki@esimerkki.fi">
+                        <small id="email-help">Anna toimiva sähköpostiosoite.</small>
+                </div>
+
+                <div class="field">
+                    <label for="message">Viesti</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        aria-describedby="message-help"></textarea>
+                    <small id="message-help">
+                        Kerro asiasi.
+                    </small>
+                </div>
+
+                <div class="field checkbox-field">
+                    <input
+                        type="checkbox"
+                        id="consent"
+                        name="consent"
+                        required
+                    >
+                    <label for="consent">
+                        Hyväksyn tietojen käsittelyn *
+                    </label>
+                </div>
+
+                <button class="button button-primary" type="submit">
+                    Lähetä viesti
+                </button>
+            </form>
+
+        </section>
+
+
+        <section aria-labelledby="korttiotsikko" class="korttiosio">
+            <h2 id="korttiotsikko">Sisältökortti</h2>
+
+            <article class="card">
+                <div class="kortinsisältö">
+                    <span class="kortti-tunniste">KEHITYS</span>
+
+                    <img src="images/moon.jpg" alt="kuukuva" class="card-image">
+
+                    <h3>Verkkokehitys</h3>
+
+                    <p>
+                        Hyvä UI on selkeä, johdonmukainen sekä responsiivinen. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea culpa cumque voluptas quibusdam nisi temporibus iure, autem voluptates nam eum non velit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, illum magni! Facere inventore, incidunt molestias quae accusantium consequatur impedit quaerat repudiandae eos dolorem recusandae dicta officiis? Dicta commodi maxime ab aut molestias repudiandae harum est ullam. Ipsa praesentium dolorum doloribus modi numquam dicta nesciunt! Aperiam animi natus veritatis ducimus deleniti illo? Deserunt at perspiciatis doloremque, impedit excepturi officiis dolorem facere mollitia deleniti ratione aliquid ad, porro laboriosam placeat aliquam. Ipsam quaerat, blanditiis expedita laboriosam praesentium, reiciendis sunt quasi eligendi voluptatem, maiores quibusdam. Sunt magnam eveniet modi dolores deleniti natus praesentium, repellat excepturi laborum eum est aut eos harum qui aperiam.
+                    </p>
+
+                    <a href="#lomakeotsikko">Siirry lomakkeeseen</a>
+                </div>
+            </article>
+        </section>
+
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Samuli Kivelä 2024</p>
+    </footer>
+</body>
+</html>

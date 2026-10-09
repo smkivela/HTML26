@@ -2,16 +2,99 @@
 
 /* Aloita CSS:n kirjoittaminen tämän kommentin alta. */
 
+
+:root {
+  --pääväri: radial-gradient(circle, #f7f4ee 0%, #ddf0d3 100%);
+  --text-väri: #0b3725;
+  --aksentti-väri: radial-gradient(circle, #dc2626 0%, #b91c1c 100%);
+  --aksentti-väri-hover: #b91c1c;
+  --huomio: #475569;
+  --korttiraja: #cfb7b0;
+  --header-footer-tausta: #e4f0f2;
+  --marginaali: 8rem;
+
+
+}
+
+
+
 * {
     box-sizing: border-box;
 }
 
-body {
-    text-align: center;
+/* Piilotetaan skip-linkit */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    z-index: 1000;
 }
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Header */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+        to top,
+        var(--header-footer-tausta) 0%,
+        var(--header-footer-tausta) 30%,
+        transparent 100%
+    )
+    ;
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid var(--korttiraja);
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background: var(--pääväri);
+}
+
+li {
+    list-style: none;
+}
+
+.nav-list {
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-väri);
+}
+
+.nav-list {
+    display: flex;
+    gap: 1rem;
+    margin-right: var(--marginaali);
+}
+
+.brand {
+    display: flex;
+    margin-left: var(--marginaali);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-väri);
+    text-decoration: none;
+}
+
+/* Kortit */
 
 .card-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(250px, 1fr));
     grid-template-rows: auto;
+    gap: 1rem;
+}
+
+#cards {
+    padding: 1rem;
 }
