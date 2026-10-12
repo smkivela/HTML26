@@ -6,35 +6,31 @@
 }
 
 :root {
-    --tausta: #f5f3ed;
-    --pinta: #fffefa;
-    --sivupalkki: linear-gradient(to left, #1d0d04, #41320d);
-    --cv-teksti: #323a36;
-    --teksti: #cbc3a5;
-    --vaimea: #696b65;
-    --korostus: #4e3717;
-    --reuna: #dedbd1;
-    --sivupalkki-teksti: #f0eff7;
-    --sivupalkki-vaimea: #c3c5d5;
-    --sivupalkki-korostus: #fff2bd;
+    --tausta: #f1e7dc;
+    --pinta: #faf8f6;
+    --sivupalkki: linear-gradient(to left, #302832, #0c040b);
+    --cv-teksti: #38343a;
+    --teksti: #f5f0f3;
+    --vaimea: #777078;
+    --korostus: #73566d;
+    --reuna: #ded6dc;
+    --sivupalkki-teksti: #f5f0f3;
+    --sivupalkki-vaimea: #d0c5d0;
+    --sivupalkki-korostus: #d9bfd5;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-
-
-
 body {
     background-color: var(--tausta);
     background-image: none;
-
     color: var(--teksti);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 1.7;
-    padding: 40px 20px;
+
 }
 
 article {
@@ -42,39 +38,53 @@ article {
 }
 
 header {
-    background-color: #000;
+    background-color: #302832;
     color: var(--teksti);
+
     background-image:
-        linear-gradient(to right, #000 0%, transparent 50%),
+        linear-gradient(
+            to right,
+            rgba(7, 6, 7, 0.85) 0%,
+            rgba(7, 6, 7, 1) 20%,
+            rgba(7, 6, 7, 0.15) 45%,
+            rgba(7, 6, 7, 0) 70%
+        ),
         url("images/headertausta.jvg.jpg");
 
     background-size: 100% 100%, cover;
-    background-position: left top, 150px 20%;
+    background-position: left top, 140px 20%;
     background-repeat: no-repeat;
 
     font-family: Helvetica, Arial, sans-serif;
     letter-spacing: 0.1rem;
 
     margin-bottom: 38px;
-    padding: 40px;
-    padding-bottom: 28px;
+    padding: 30px;
+    padding-bottom: 14px;
+
     border-bottom: 2px solid var(--korostus);
     border-radius: 8px;
     line-height: 2rem;
 }
 
+/* CV:N KOKONAISRAKENNE */
 
 .cv {
-    position: relative;
+    position: sticky;
+    top: 40px;
     z-index: 1;
     isolation: isolate;
+
     width: 100%;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 24px auto 0;
+
     display: grid;
     grid-template-columns: 300px minmax(0, 1fr);
+
     background: rgba(255, 254, 250, 0.65);
     box-shadow: 0 12px 40px rgba(45, 43, 35, 0.07);
+
     align-items: stretch;
 }
 
@@ -96,8 +106,17 @@ header {
 .sidebar {
     grid-column: 1;
     grid-row: 1;
+
+    position: sticky;
+    top: 0;
+
+    height: 100vh;
+    overflow-y: auto;
+    align-self: start;
+
     background: var(--sivupalkki);
     color: var(--sivupalkki-teksti);
+
     padding: 42px 30px;
 }
 
@@ -111,8 +130,10 @@ header {
     font-weight: 700;
     letter-spacing: 0.13em;
     text-transform: uppercase;
+
     padding-bottom: 9px;
     margin-bottom: 13px;
+
     border-bottom: 1px solid rgba(240, 239, 247, 0.2);
 }
 
@@ -121,6 +142,7 @@ header {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.4;
+
     margin-top: 15px;
     margin-bottom: 3px;
 }
@@ -153,10 +175,14 @@ header {
     color: var(--sivupalkki-korostus);
     text-decoration: none;
     overflow-wrap: anywhere;
+
+    transition: color 0.3s ease;
 }
 
 .sidebar a:hover {
+    color: #ffffff;
     text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 /* OIKEA SISÄLTÖ */
@@ -168,49 +194,12 @@ header {
 .content {
     grid-column: 2;
     grid-row: 1;
+
     min-width: 0;
-    padding: 48px 46px;
+    padding: 30px 46px;
     background: transparent;
-}
 
-
-header h1 {
-    color: var(--teksti);
-    font-size: clamp(32px, 4vw, 46px);
-    font-weight: 600;
-    letter-spacing: -0.045em;
-    line-height: 1.1;
-    margin-bottom: 12px;
-}
-
-header p {
-    color: var(--teksti);
-    font-size: 16px;
-    letter-spacing: 0.04em;
-    margin-bottom: 14px;
-}
-
-header address {
-    color: var(--teksti);
-    font-size: 13px;
-    font-style: normal;
-    line-height: 1.8;
-}
-
-header a {
-    color: yellow;
-    text-decoration: none;
-    overflow-wrap: anywhere;
-    transition: text-shadow 0.5s ease, transform 0.5s ease;
-    display: inline-block;
-}
-
-header a:hover {
-    text-shadow:
-        0 0 3px #fff,
-        0 0 8px #fff,
-        0 0 10px rgba(255, 255, 255, 0.01);
-    transform: translateY(-2px);
+    animation: fadeInUp 1.6s ease-out both;
 }
 
 .content section {
@@ -223,13 +212,15 @@ header a:hover {
     font-weight: 700;
     letter-spacing: 0.13em;
     text-transform: uppercase;
+
     margin-bottom: 17px;
     padding-bottom: 9px;
+
     border-bottom: 1px solid var(--reuna);
 }
 
 .content h3 {
-    color: var(--teksti);
+    color: var(--cv-teksti);
     font-size: 17px;
     font-weight: 650;
     line-height: 1.4;
@@ -267,34 +258,252 @@ header a:hover {
 }
 
 .content a {
-    color: rgb(232, 232, 131);
+    color: var(--korostus);
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     overflow-wrap: anywhere;
+
+    transition: color 0.3s ease;
 }
 
 .content a:hover {
-    color: var(--teksti);
+    color: #98748f;
 }
 
 p {
     overflow-wrap: break-word;
 }
 
+/* HEADERIN LINKIT */
+
+header a,
+header a:visited {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+    text-decoration-color: #73566d !important;
+    text-underline-offset: 4px;
+    font-size: 0.75rem;
+}
+
+header a:hover {
+    color: #f6dff3;
+    text-decoration-color: #f6dff3;
+    text-shadow: 0 0 6px rgba(246, 223, 243, 0.35);
+}
+
+/* SVG-TAUSTA */
+
 .oscilloscope-bg {
     position: fixed;
     inset: 0;
+
     width: 100%;
     height: 100%;
+
     z-index: 0;
     pointer-events: none;
+
     opacity: 0.9;
     filter: none;
 }
 
-.cv {
-    position: relative;
-    z-index: 1;
+header a:hover {
+    color: #f6dff3 !important;
+    text-decoration-color: #f6dff3 !important;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.sidebar-section {
+    margin-bottom: 24px;
+}
+
+.sidebar-section summary {
+    color: var(--sivupalkki-korostus);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    padding-bottom: 9px;
+    margin-bottom: 13px;
+
+    border-bottom: 1px solid rgba(240, 239, 247, 0.2);
+
+    cursor: pointer;
+    list-style: none;
+}
+
+.sidebar-section summary::-webkit-details-marker {
+    display: none;
+}
+
+.sidebar-section summary::after {
+    content: "+";
+    float: right;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.sidebar-section[open] summary::after {
+    content: "−";
+}
+
+.sidebar-section summary:hover {
+    color: #ffffff;
+}
+
+.sidebar-section > h3:first-of-type {
+    margin-top: 0;
+}
+
+.sidebar-section[open] {
+    margin-bottom: 105px;
+}
+
+.content details,
+.content details.cvteksti {
+    color: var(--cv-teksti);
+    margin-bottom: 34px;
+}
+
+.content details > summary {
+    color: var(--korostus);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    margin-bottom: 17px;
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid var(--reuna);
+
+    cursor: pointer;
+    list-style: none;
+}
+
+.content details > summary::-webkit-details-marker {
+    display: none;
+}
+
+.content details > summary::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.content details[open] > summary::after {
+    content: "−";
+}
+
+.content details article {
+    margin-bottom: 20px;
+}
+
+.content details p {
+    margin-bottom: 12px;
+}
+
+.content details ul {
+    padding-left: 20px;
+    margin: 8px 0 16px;
+}
+
+.content details li {
+    margin-bottom: 7px;
+    padding-left: 3px;
+}
+
+.content details li::marker {
+    color: var(--korostus);
+}
+
+.content details strong {
+    font-weight: 650;
+}
+
+.content details > summary:hover {
+    color: #98748f;
+}
+
+/* SINIAALTO */
+.siniaalto {
+    position: fixed;
+    right: 5px;
+    left: auto;
+    top: 10%;
+    width: 400px;
+    height: auto;
+    overflow: visible;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.siniaalto path {
+    fill: none;
+    stroke: #626d91;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+/* KANTTIAALTO */
+.kanttiaalto {
+    position: fixed;
+    left: 140px;
+    right: auto;
+    top: 80%;
+    width: 200px;
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.kanttiaalto path {
+    fill: none;
+    stroke: #039b9b;
+    stroke-width: 2;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+}
+
+/* KAIKKIEN MUIDEN AALTOJEN YHTEISET TYYLIT */
+.aalto {
+    position: fixed;
+    width: 350px;
+    height: auto;
+    fill: none;
+    stroke: #626d91;
+    stroke-width: 2;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* KOLMIOAALTO */
+.kolmioaalto {
+    right: 140px;
+    left: auto;
+    top: 40%;
+    opacity: 0.4;
+}
+
+/* SAHALAITA-AALTO */
+.sahalaita {
+    left: -120px;
+    right: auto;
+    top: 25%;
+    opacity: 0.7;
+}
+
+/* VAIMENEVA AALTO */
+.vaimeneva {
+    right: -70px;
+    left: auto;
+    top: 60%;
+    opacity: 0.2;
 }
 
 /* TABLETTI */
@@ -360,6 +569,8 @@ p {
     }
 }
 
+
+
 /* TULOSTUS JA PDF */
 
 @media print {
@@ -370,12 +581,17 @@ p {
 
     body {
         background: white;
-        color: var(--teksti);
+        color: var(--cv-teksti);
         padding: 0;
         font-size: 9pt;
         line-height: 1.5;
+
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
+    }
+
+    .oscilloscope-bg {
+        display: none;
     }
 
     .cv {
@@ -389,14 +605,18 @@ p {
         grid-column: 1;
         grid-row: 1;
         padding: 20px 15px;
+
         background: var(--sivupalkki) !important;
         color: var(--sivupalkki-teksti) !important;
+
+        animation: none;
     }
 
     .content {
         grid-column: 2;
         grid-row: 1;
         padding: 22px 24px;
+        animation: none;
     }
 
     header {
@@ -434,6 +654,8 @@ p {
     }
 }
 
+/* SISÄÄNTULOANIMAATIO */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -446,15 +668,9 @@ p {
     }
 }
 
-.content {
-    animation: fadeInUp 1.6s ease-out both;
-}
-
 .sidebar {
     animation: fadeInUp 1.6s ease-out 0.2s both;
 }
-
-
 
 /* VÄHENNETYT ANIMAATIOT */
 

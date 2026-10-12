@@ -16,354 +16,324 @@
 
 <body>
 
-
-<svg
-    class="oscilloscope-bg"
+    <svg
+    id="siniaalto"
+    class="siniaalto"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1200 900"
-    preserveAspectRatio="xMidYMid slice"
+    viewBox="0 0 300 100"
     aria-hidden="true"
 >
-    <defs>
-        <linearGradient
-            id="scope-wave-gradient"
-            x1="0%"
-            y1="0%"
-            x2="100%"
-            y2="0%"
-        >
-            <stop offset="0%" stop-color="#69c795" stop-opacity="0.15" />
-            <stop offset="25%" stop-color="#69c795" stop-opacity="0.9" />
-            <stop offset="75%" stop-color="#69c795" stop-opacity="0.9" />
-            <stop offset="100%" stop-color="#69c795" stop-opacity="0.15" />
-        </linearGradient>
-
-        <filter
-            id="scope-glow"
-            x="-20%"
-            y="-100%"
-            width="140%"
-            height="300%"
-        >
-            <feGaussianBlur stdDeviation="4" />
-        </filter>
-    </defs>
-
-    <!-- Pehmeä hehku aallon takana -->
     <path
-        id="scope-wave-glow"
-        d="M 0 450
-           C 50 450, 50 300, 100 300
-           S 150 600, 200 600
-           S 250 300, 300 300
-           S 350 600, 400 600
-           S 450 300, 500 300
-           S 550 600, 600 600
-           S 650 300, 700 300
-           S 750 600, 800 600
-           S 850 300, 900 300
-           S 950 600, 1000 600
-           S 1050 300, 1100 300
-           S 1150 450, 1200 450"
-        fill="none"
-        stroke="#69c795"
-        stroke-width="5"
-        stroke-linecap="round"
-        filter="url(#scope-glow)"
-        opacity="0.7"
-    />
-
-    <!-- Selkeä oskilloskoopin aaltomuoto -->
-    <path
-        id="scope-wave"
-        d="M 0 450
-           C 50 450, 50 300, 100 300
-           S 150 600, 200 600
-           S 250 300, 300 300
-           S 350 600, 400 600
-           S 450 300, 500 300
-           S 550 600, 600 600
-           S 650 300, 700 300
-           S 750 600, 800 600
-           S 850 300, 900 300
-           S 950 600, 1000 600
-           S 1050 300, 1100 300
-           S 1150 450, 1200 450"
-        fill="none"
-        stroke="url(#scope-wave-gradient)"
-        stroke-width="2.5"
-        stroke-linecap="round"
+        id="siniaalto-polku"
+        d="M0 50 C25 0 50 0 75 50 S125 100 150 50 S200 0 225 50 S275 100 300 50"
     />
 </svg>
+
+<svg
+    id="kanttiaalto"
+    class="kanttiaalto"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 300 100"
+    aria-hidden="true"
+>
+    <path
+        id="kanttiaalto-polku"
+        d="M0 25 H37.5 V75 H75 V25 H112.5 V75 H150 V25 H187.5 V75 H225 V25 H262.5 V75 H300"
+    />
+</svg>
+
+<svg class="aalto kolmioaalto" viewBox="0 0 300 100">
+    <path d="M0 50 L37.5 10 L75 50 L112.5 90
+             L150 50 L187.5 10 L225 50
+             L262.5 90 L300 50" />
+</svg>
+
+<svg class="aalto sahalaita" viewBox="0 0 300 100">
+    <path d="M0 90 L75 10 L75 90 L150 10
+             L150 90 L225 10 L225 90 L300 10" />
+</svg>
+
+<svg class="aalto vaimeneva" viewBox="0 0 300 100">
+    <path d="M0 50
+             Q15 0 30 50
+             T60 50 T90 50 T120 50
+             T150 50 T180 50 T210 50
+             T240 50 T270 50 T300 50" />
+</svg>
+
+
 
 
 
 <div class="cv">
 
-    <!-- SIVUPALKKI -->
 
-    <aside class="sidebar">
+<!-- SIVUPALKKI -->
 
-        <section>
-            <h2>Education</h2>
+<aside class="sidebar">
 
-            <article>
-                <time>2010–2017</time>
-                <h3>Sibelius Academy</h3>
-                <p>Jazz Department, Electric Guitar</p>
-                <p>Master of Music</p>
-            </article>
+    <details class="sidebar-section" open>
+        <summary>Education</summary>
 
-            <article>
-                <time>2009–2010</time>
-                <h3>Metropolia University of Applied Sciences</h3>
-                <p>One year of Pop and Jazz Music Pedagogy Studies</p>
-            </article>
+        <article>
+            <time>2010–2017</time>
+            <h3>Sibelius Academy</h3>
+            <p>Jazz Department, Electric Guitar</p>
+            <p>Master of Music</p>
+        </article>
 
-            <article>
-                <time>2006–2009</time>
-                <h3>Oulu Conservatory</h3>
-                <p>Vocational Musician Qualification</p>
-            </article>
+        <article>
+            <time>2009–2010</time>
+            <h3>Metropolia University of Applied Sciences</h3>
+            <p>One year of Pop and Jazz Music Pedagogy Studies</p>
+        </article>
 
-            <article>
-                <time>2026–present</time>
-                <h3>Keuda</h3>
-                <p>Software Developer Studies, ongoing</p>
-            </article>
-        </section>
+        <article>
+            <time>2006–2009</time>
+            <h3>Oulu Conservatory</h3>
+            <p>Vocational Musician Qualification</p>
+        </article>
 
-
-        <section>
-            <h2>Memberships</h2>
-            <ul>
-                <li>Finnish Musicians' Union</li>
-                <li>Teosto — voting member</li>
-            </ul>
-        </section>
+        <article>
+            <time>2026–present</time>
+            <h3>Keuda</h3>
+            <p>Software Developer Studies, ongoing</p>
+        </article>
+    </details>
 
 
-        <section>
-            <h2>Awards</h2>
-
-            <article>
-                <time>2026</time>
-                <h3>Uneton48 Short Film Competition</h3>
-                <p>Best Sound Design and Music</p>
-            </article>
-
-            <article>
-                <time>2026</time>
-                <h3>Uneton48 Docs Short Documentary Competition</h3>
-                <p>Jury Favourite Award</p>
-            </article>
-        </section>
+    <details class="sidebar-section">
+        <summary>Memberships</summary>
+        <ul>
+            <li>Finnish Musicians' Union</li>
+            <li>Teosto — voting member</li>
+        </ul>
+    </details>
 
 
-        <section>
-            <h2>Residencies</h2>
+    <details class="sidebar-section">
+        <summary>Awards</summary>
 
-            <article>
-                <time>October 2025</time>
-                <h3>Finnish Musicians' Union — Villa Vikan Residency</h3>
-            </article>
+        <article>
+            <time>2026</time>
+            <h3>Uneton48 Short Film Competition</h3>
+            <p>Best Sound Design and Music</p>
+        </article>
 
-            <article>
-                <time>November 2024</time>
-                <h3>Finnish Musicians' Union — Málaga Residency</h3>
-            </article>
-
-            <article>
-                <time>June 2024</time>
-                <h3>Cirko Helsinki</h3>
-                <p>With Recover Laboratory</p>
-            </article>
-
-            <article>
-                <time>August 2023</time>
-                <h3>Saaren Kartano Residency, Kone Foundation</h3>
-                <p>Recover Laboratory collective</p>
-            </article>
-
-            <article>
-                <time>April 2023</time>
-                <h3>Circusnext, Paris</h3>
-                <p>Recover Laboratory collective</p>
-            </article>
-
-            <article>
-                <time>March 2023</time>
-                <h3>Finnish Musicians' Union — Berlin Residency</h3>
-            </article>
-
-            <article>
-                <time>August 2022</time>
-                <h3>Äkäslompolo</h3>
-                <p>Recover Laboratory collective</p>
-            </article>
-
-            <article>
-                <time>May 2022</time>
-                <h3>Orivesi College</h3>
-                <p>With Recover Laboratory</p>
-            </article>
-
-            <article>
-                <time>April 2018</time>
-                <h3>Cirko Helsinki</h3>
-                <p>Collaboration between the band Serot and Vire</p>
-            </article>
-        </section>
+        <article>
+            <time>2026</time>
+            <h3>Uneton48 Docs Short Documentary Competition</h3>
+            <p>Jury Favourite Award</p>
+        </article>
+    </details>
 
 
-        <section>
-            <h2>Grants</h2>
+    <details class="sidebar-section">
+        <summary>Residencies</summary>
 
-            <article>
-                <time>2026</time>
-                <h3>Arts Promotion Centre Finland (Taike)</h3>
-                <p>One month of working grant. Helsinki 98 collective.</p>
-            </article>
+        <article>
+            <time>October 2025</time>
+            <h3>Finnish Musicians' Union — Villa Vikan Residency</h3>
+        </article>
 
-            <article>
-                <time>2025</time>
-                <h3>City of Helsinki</h3>
-                <p>One month of working grant. Helsinki 98 collective.</p>
-            </article>
+        <article>
+            <time>November 2024</time>
+            <h3>Finnish Musicians' Union — Málaga Residency</h3>
+        </article>
 
-            <article>
-                <time>2025</time>
-                <h3>Music Promotion Foundation (MES)</h3>
-                <p>Two weeks of working grant. Ramy Essam Band.</p>
-            </article>
+        <article>
+            <time>June 2024</time>
+            <h3>Cirko Helsinki</h3>
+            <p>With Recover Laboratory</p>
+        </article>
 
-            <article>
-                <time>2025</time>
-                <h3>City of Helsinki</h3>
-                <p>One month of working grant. Helsinki 98 collective.</p>
-            </article>
+        <article>
+            <time>August 2023</time>
+            <h3>Saaren Kartano Residency, Kone Foundation</h3>
+            <p>Recover Laboratory collective</p>
+        </article>
 
-            <article>
-                <time>2024</time>
-                <h3>Arts Promotion Centre Finland</h3>
-                <p>Artistic work grant. Recover Laboratory, <em>Salainen saari</em>.</p>
-            </article>
+        <article>
+            <time>April 2023</time>
+            <h3>Circusnext, Paris</h3>
+            <p>Recover Laboratory collective</p>
+        </article>
 
-            <article>
-                <time>2024</time>
-                <h3>Samuel Huber Art Foundation</h3>
-                <p>One-month working grant. Surrealiisa.</p>
-            </article>
+        <article>
+            <time>March 2023</time>
+            <h3>Finnish Musicians' Union — Berlin Residency</h3>
+        </article>
 
-            <article>
-                <time>2024</time>
-                <h3>City of Helsinki</h3>
-                <p>One month of working grant. Helsinki 98 collective.</p>
-            </article>
+        <article>
+            <time>August 2022</time>
+            <h3>Äkäslompolo</h3>
+            <p>Recover Laboratory collective</p>
+        </article>
 
-            <article>
-                <time>2023</time>
-                <h3>Nordic Culture Point</h3>
-                <p>Residency in Riga, Latvia. Recover Laboratory, <em>Pienempi kuin kolme</em>.</p>
-            </article>
+        <article>
+            <time>May 2022</time>
+            <h3>Orivesi College</h3>
+            <p>With Recover Laboratory</p>
+        </article>
 
-            <article>
-                <time>2023</time>
-                <h3>Culture Moves Europe / Goethe-Institut</h3>
-                <p>Travel and residency grant. Recover Laboratory, <em>Pienempi kuin kolme</em>.</p>
-            </article>
-
-            <article>
-                <time>2023</time>
-                <h3>Kone Foundation</h3>
-                <p>Residency grant. Recover Laboratory, <em>Pienempi kuin kolme</em>.</p>
-            </article>
-
-            <article>
-                <time>2023</time>
-                <h3>Circusnext Finalist Grants</h3>
-                <p>Project and working grant. Recover Laboratory, <em>Pienempi kuin kolme</em>.</p>
-            </article>
-
-            <article>
-                <time>2022</time>
-                <h3>Arts Promotion Centre Finland</h3>
-                <p>Two-month working grant.</p>
-            </article>
-
-            <article>
-                <time>2022</time>
-                <h3>Arts Promotion Centre Finland</h3>
-                <p>Two-month working grant.</p>
-            </article>
-
-            <article>
-                <time>2021</time>
-                <h3>Music Promotion Foundation (MES)</h3>
-                <p>Two-week working grant. why so shy.</p>
-            </article>
-
-            <article>
-                <time>2020</time>
-                <h3>Arts Promotion Centre Finland</h3>
-                <p>Two-month working grant.</p>
-            </article>
-
-            <article>
-                <time>2020</time>
-                <h3>City of Helsinki</h3>
-                <p>Production grant. Recover Laboratory, <em>Iltakävely</em>.</p>
-            </article>
-
-            <article>
-                <time>2020</time>
-                <h3>Music Promotion Foundation (MES)</h3>
-                <p>Two-week working grant. Ramy Essam Band.</p>
-            </article>
-
-            <article>
-                <time>2018</time>
-                <h3>Music Promotion Foundation (MES)</h3>
-                <p>One-month working grant. Serot.</p>
-            </article>
-
-            <article>
-                <time>2015</time>
-                <h3>Finnish Cultural Foundation (SKR)</h3>
-                <p>Grant for producing a rock documentary. Hra Apatia collective.</p>
-            </article>
-        </section>
+        <article>
+            <time>April 2018</time>
+            <h3>Cirko Helsinki</h3>
+            <p>Collaboration between the band Serot and Vire</p>
+        </article>
+    </details>
 
 
-        <section>
-            <h2>Online</h2>
+    <details class="sidebar-section">
+        <summary>Grants</summary>
 
-            <p>
-                <a href="https://samulikivela.com"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    samulikivela.com
-                </a>
-            </p>
+        <article>
+            <time>2026</time>
+            <h3>Arts Promotion Centre Finland (Taike)</h3>
+            <p>One month of working grant. Helsinki 98 collective.</p>
+        </article>
 
-            <p>
-                <a href="https://tinyurl.com/portfolio-samuli"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Portfolio
-                </a>
-            </p>
+        <article>
+            <time>2025</time>
+            <h3>City of Helsinki</h3>
+            <p>One month of working grant. Helsinki 98 collective.</p>
+        </article>
 
-            <p>
-                <a href="https://tinyurl.com/3wrn2sxf"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Audio reel
-                </a>
-            </p>
-        </section>
+        <article>
+            <time>2025</time>
+            <h3>Music Promotion Foundation (MES)</h3>
+            <p>Two weeks of working grant. Ramy Essam Band.</p>
+        </article>
 
-    </aside>
+        <article>
+            <time>2025</time>
+            <h3>City of Helsinki</h3>
+            <p>One month of working grant. Helsinki 98 collective.</p>
+        </article>
+
+        <article>
+            <time>2024</time>
+            <h3>Arts Promotion Centre Finland</h3>
+            <p>Artistic work grant. Recover Laboratory, <em>Salainen saari</em>.</p>
+        </article>
+
+        <article>
+            <time>2024</time>
+            <h3>Samuel Huber Art Foundation</h3>
+            <p>One-month working grant. Surrealiisa.</p>
+        </article>
+
+        <article>
+            <time>2024</time>
+            <h3>City of Helsinki</h3>
+            <p>One month of working grant. Helsinki 98 collective.</p>
+        </article>
+
+        <article>
+            <time>2023</time>
+            <h3>Nordic Culture Point</h3>
+            <p>Residency in Riga, Latvia. Recover Laboratory, <em>Pienempi kuin kolme</em>.</p>
+        </article>
+
+        <article>
+            <time>2023</time>
+            <h3>Culture Moves Europe / Goethe-Institut</h3>
+            <p>Travel and residency grant. Recover Laboratory, <em>Pienempi kuin kolme</em>.</p>
+        </article>
+
+        <article>
+            <time>2023</time>
+            <h3>Kone Foundation</h3>
+            <p>Residency grant. Recover Laboratory, <em>Pienempi kuin kolme</em>.</p>
+        </article>
+
+        <article>
+            <time>2023</time>
+            <h3>Circusnext Finalist Grants</h3>
+            <p>Project and working grant. Recover Laboratory, <em>Pienempi kuin kolme</em>.</p>
+        </article>
+
+        <article>
+            <time>2022</time>
+            <h3>Arts Promotion Centre Finland</h3>
+            <p>Two-month working grant.</p>
+        </article>
+
+        <article>
+            <time>2022</time>
+            <h3>Arts Promotion Centre Finland</h3>
+            <p>Two-month working grant.</p>
+        </article>
+
+        <article>
+            <time>2021</time>
+            <h3>Music Promotion Foundation (MES)</h3>
+            <p>Two-week working grant. why so shy.</p>
+        </article>
+
+        <article>
+            <time>2020</time>
+            <h3>Arts Promotion Centre Finland</h3>
+            <p>Two-month working grant.</p>
+        </article>
+
+        <article>
+            <time>2020</time>
+            <h3>City of Helsinki</h3>
+            <p>Production grant. Recover Laboratory, <em>Iltakävely</em>.</p>
+        </article>
+
+        <article>
+            <time>2020</time>
+            <h3>Music Promotion Foundation (MES)</h3>
+            <p>Two-week working grant. Ramy Essam Band.</p>
+        </article>
+
+        <article>
+            <time>2018</time>
+            <h3>Music Promotion Foundation (MES)</h3>
+            <p>One-month working grant. Serot.</p>
+        </article>
+
+        <article>
+            <time>2015</time>
+            <h3>Finnish Cultural Foundation (SKR)</h3>
+            <p>Grant for producing a rock documentary. Hra Apatia collective.</p>
+        </article>
+    </details>
+
+
+    <details class="sidebar-section">
+        <summary>Online</summary>
+
+        <p>
+            <a href="https://samulikivela.com"
+               target="_blank"
+               rel="noopener noreferrer">
+                samulikivela.com
+            </a>
+        </p>
+
+        <p>
+            <a href="https://tinyurl.com/portfolio-samuli"
+               target="_blank"
+               rel="noopener noreferrer">
+                Portfolio
+            </a>
+        </p>
+
+        <p>
+            <a href="https://tinyurl.com/3wrn2sxf"
+               target="_blank"
+               rel="noopener noreferrer">
+                Audio reel
+            </a>
+        </p>
+    </details>
+
+</aside>
+
+
 
 
     <!-- PÄÄSISÄLTÖ -->
@@ -421,8 +391,8 @@
         </section>
 
 
-        <section class="cvteksti">
-            <h2>Sound Designer, Mixing engineer and Music Producer</h2>
+        <details class="cvteksti">
+            <summary>Sound Designer, Mixing engineer and Music Producer</summary>
 
             <article>
                 <p><strong>2026</strong> <strong>Lahja.</strong> Short film, Soijamakkaravarkaat.</p>
@@ -563,11 +533,11 @@
             <article>
                 <p><strong>2016</strong> <strong>Pelaa maltilla.</strong> Escape game by Veikkaus and InsideOut Escape Games.</p>
             </article>
-        </section>
+        </details>
 
 
-        <section class="cvteksti">
-            <h2>Musician, Arranger, Recording Engineer, Producer and Mixing Engineer</h2>
+        <details class="cvteksti">
+            <summary>Musician, Arranger, Recording Engineer, Producer and Mixing Engineer</summary>
 
             <article>
                 <p><strong>2025</strong> <strong>Ramy Essam — Ra7 Nelte2i (We Shall Meet Again).</strong> Musician, producer, recording engineer and mixing engineer. Rock single.</p>
@@ -728,11 +698,11 @@
             <article>
                 <p><strong>2012</strong> <strong>Olli PA — Myrsky.</strong> Musician. Album by rap artist Olli PA.</p>
             </article>
-        </section>
+        </details>
 
 
-        <section class="cvteksti">
-            <h2>TV Appearances</h2>
+        <details class="cvteksti">
+            <summary>TV Appearances</summary>
 
             <article>
                 <p><strong>2020</strong> <strong>Putous Allstars.</strong> Guitarist and synthesizer player for the season of the Finnish TV show Putous.</p>
@@ -757,11 +727,11 @@
             <article>
                 <p><strong>2013</strong> <strong>Elämän Kevät — Concert.</strong></p>
             </article>
-        </section>
+        </details>
 
 
-        <section class="cvteksti">
-            <h2>Bands</h2>
+        <details class="cvteksti">
+            <summary>Bands</summary>
 
             <ul>
                 <li>Ramy Essam Band</li>
@@ -775,89 +745,127 @@
                 <li>Surrealiisa</li>
                 <li>L’Boyzzz</li>
             </ul>
-        </section>
+        </details>
 
     </main>
 
 </div>
 
-
 <script>
-const svg = document.querySelector(".oscilloscope-bg");
-const paths = [...svg.querySelectorAll("path")];
+const siniaalto = document.querySelector("#siniaalto-polku");
+const kanttiaalto = document.querySelector("#kanttiaalto-polku");
+const kolmioaalto = document.querySelector(".kolmioaalto path");
+const sahalaita = document.querySelector(".sahalaita path");
+const vaimeneva = document.querySelector(".vaimeneva path");
 
-const waves = paths.map((path, index) => {
-    const length = path.getTotalLength();
-    const count = 220;
-    const points = [];
+let scrollY = window.scrollY;
+let edellinenScrollY = scrollY;
 
-    for (let i = 0; i <= count; i++) {
-        const point = path.getPointAtLength(
-            (i / count) * length
-        );
+// Muodostetaan SVG-polku
+function muodostaPolku(laskeY) {
+let polku = "";
 
-        points.push({
-            x: point.x,
-            y: point.y
-        });
+for (let x = 0; x <= 300; x += 1) {
+    const y = laskeY(x);
+
+    if (x === 0) {
+        polku = `M${x} ${y}`;
+    } else {
+        polku += ` L${x} ${y}`;
     }
-
-    return { path, points, index };
-});
-
-let previousScroll = window.scrollY;
-let energy = 0;
-let scrollPhase = 0;
-
-window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
-    const delta = currentScroll - previousScroll;
-
-    energy = Math.min(1, energy + Math.abs(delta) / 100);
-    scrollPhase += delta * 0.025;
-    previousScroll = currentScroll;
-}, { passive: true });
-
-const reducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-);
-
-function animate() {
-    if (!reducedMotion.matches) {
-        energy *= 0.94;
-
-        waves.forEach(({ path, points, index }) => {
-            const amplitude = energy * (12 + index * 4);
-
-            const d = points.map((point, i) => {
-                const progress = i / (points.length - 1);
-
-                const wave1 = Math.sin(
-                    point.x * 0.018 +
-                    scrollPhase +
-                    index * 1.7
-                );
-
-                const wave2 = Math.cos(
-                    point.y * 0.022 -
-                    scrollPhase * 0.7 +
-                    progress * 8
-                );
-
-                const x = point.x + wave2 * amplitude * 0.45;
-                const y = point.y + wave1 * amplitude;
-
-                return `${i === 0 ? "M" : "L"} ${x} ${y}`;
-            }).join(" ");
-
-            path.setAttribute("d", d);
-        });
-    }
-
-    requestAnimationFrame(animate);
 }
 
-animate();
+return polku;
+
+}
+
+// Päivitetään aallot scrollauksen perusteella
+function animoiAallot() {
+const liike = scrollY - edellinenScrollY;
+edellinenScrollY = scrollY;
+
+// 1. Siniaalto
+if (siniaalto) {
+    const amplitudi = 25 + Math.min(scrollY / 10, 35);
+
+    siniaalto.setAttribute(
+        "d",
+        muodostaPolku(x =>
+            50 + Math.sin(x * 0.04 - scrollY * 0.015) * amplitudi
+        )
+    );
+}
+
+// 2. Kanttiaalto
+if (kanttiaalto) {
+    const jakso = 75;
+    const siirtyma = scrollY - 0.8;
+
+    kanttiaalto.setAttribute(
+        "d",
+        muodostaPolku(x => {
+            const vaihe = ((x + siirtyma) % jakso) / jakso;
+            return vaihe > 0.5 ? 25 : 75;
+        })
+    );
+}
+
+// 3. Kolmioaalto
+if (kolmioaalto) {
+    const jakso = 100;
+    const siirtyma = scrollY * 1.2;
+
+    kolmioaalto.setAttribute(
+        "d",
+        muodostaPolku(x => {
+            const vaihe = ((x + siirtyma) % jakso) / jakso;
+
+            return vaihe < 0.5
+                ? 10 + vaihe * 160
+                : 90 - (vaihe - 0.5) * 160;
+        })
+    );
+}
+
+// 4. Sahalaita
+if (sahalaita) {
+    const jakso = 75;
+    const siirtyma = scrollY * 0.4;
+
+    sahalaita.setAttribute(
+        "d",
+        muodostaPolku(x => {
+            const vaihe = ((x + siirtyma) % jakso) / jakso;
+            return 90 - vaihe * 80;
+        })
+    );
+}
+
+// 5. Vaimeneva aalto
+if (vaimeneva) {
+    vaimeneva.setAttribute(
+        "d",
+        muodostaPolku(x => {
+            const amplitudi = 35 * Math.exp(-x * 0.01);
+
+            return 50 + Math.sin(
+                x * 0.12 - scrollY * 0.025
+            ) * amplitudi;
+        })
+    );
+}
+
+}
+
+// Aallot päivittyvät vain scrollatessa
+window.addEventListener("scroll", () => {
+scrollY = window.scrollY;
+animoiAallot();
+}, { passive: true });
+
+// Piirretään aallot aluksi kerran
+animoiAallot();
+
 </script>
 
 </body>
