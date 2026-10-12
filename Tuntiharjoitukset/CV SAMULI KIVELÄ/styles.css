@@ -285,27 +285,7 @@ header a:visited {
     font-size: 0.75rem;
 }
 
-header a:hover {
-    color: #f6dff3;
-    text-decoration-color: #f6dff3;
-    text-shadow: 0 0 6px rgba(246, 223, 243, 0.35);
-}
 
-/* SVG-TAUSTA */
-
-.oscilloscope-bg {
-    position: fixed;
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    z-index: 0;
-    pointer-events: none;
-
-    opacity: 0.9;
-    filter: none;
-}
 
 header a:hover {
     color: #f6dff3 !important;
@@ -532,40 +512,55 @@ header a:hover {
 
 /* MOBIILI */
 
-@media (max-width: 560px) {
-    body {
-        padding: 0;
-        font-size: 14px;
+@media screen and (max-width: 560px) {
+    header {
+        background-image: none;
+        background-color: #070607;
+        padding-top: 0;
+        overflow: hidden;
     }
 
+    header::before {
+        content: "";
+        display: block;
+        height: 240px;
+        margin: 0 -30px 20px;
+
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(7, 6, 7, 0) 50%,
+                rgba(7, 6, 7, 1) 100%
+            ),
+            url("images/headertausta.jvg.jpg");
+
+        background-size: 100% 100%, cover;
+        background-position: left top, 75% 20%;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 900px) {
     .cv {
         grid-template-columns: 1fr;
-        box-shadow: none;
-    }
-
-    .sidebar {
-        grid-column: 1;
-        grid-row: 2;
-        padding: 28px 22px;
     }
 
     .content {
         grid-column: 1;
         grid-row: 1;
-        padding: 30px 22px;
     }
 
-    header {
-        margin-bottom: 30px;
+    .sidebar {
+        grid-column: 1;
+        grid-row: 2;
+
+        position: static;
+        height: auto;
+        overflow-y: visible;
     }
 
-    header h1 {
-        font-size: 34px;
-    }
-
-    .sidebar section,
-    .content section {
-        margin-bottom: 26px;
+    .sidebar-section[open] {
+        margin-bottom: 24px;
     }
 }
 
@@ -579,6 +574,34 @@ header a:hover {
         margin: 10mm;
     }
 
+    .sidebar-section summary::after,
+    .content details > summary::after {
+    display: none;
+}
+
+.cv {
+    position: static;
+    backdrop-filter: none;
+}
+
+.sidebar {
+    position: static;
+    height: auto;
+    overflow: visible;
+    align-self: stretch;
+}
+
+.sidebar-section[open] {
+    margin-bottom: 24px;
+}
+
+/* Taustalla liikkuvat aallot eivät kuulu tulosteeseen */
+.siniaalto,
+.kanttiaalto,
+.aalto {
+    display: none;
+}
+
     body {
         background: white;
         color: var(--cv-teksti);
@@ -590,9 +613,6 @@ header a:hover {
         -webkit-print-color-adjust: exact;
     }
 
-    .oscilloscope-bg {
-        display: none;
-    }
 
     .cv {
         display: grid;

@@ -866,6 +866,30 @@ animoiAallot();
 // Piirretään aallot aluksi kerran
 animoiAallot();
 
+let avoinnaEnnenTulostusta = [];
+
+function avaaKaikki() {
+    const kaikki = document.querySelectorAll("details");
+    avoinnaEnnenTulostusta = Array.from(kaikki).map(d => d.open);
+    kaikki.forEach(d => d.open = true);
+}
+
+function palautaTila() {
+    document.querySelectorAll("details").forEach((d, i) => {
+        d.open = avoinnaEnnenTulostusta[i] ?? d.open;
+    });
+}
+
+window.addEventListener("beforeprint", avaaKaikki);
+window.addEventListener("afterprint", palautaTila);
+
+// Varmistus selaimille, jotka eivät lähetä beforeprint-tapahtumaa
+const tulostusMedia = window.matchMedia("print");
+tulostusMedia.addEventListener("change", e => {
+    if (e.matches) avaaKaikki();
+    else palautaTila();
+});
+
 </script>
 
 </body>
