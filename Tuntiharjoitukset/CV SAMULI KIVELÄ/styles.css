@@ -642,6 +642,19 @@ header a:hover {
     header {
         margin-bottom: 22px;
         padding-bottom: 16px;
+                background-image:
+            linear-gradient(
+                to right,
+                rgba(7, 6, 7, 0.85) 0%,
+                rgba(7, 6, 7, 1) 15%,
+                rgba(7, 6, 7, 0.15) 38%,
+                rgba(7, 6, 7, 0) 60%
+            ),
+            url("images/headertausta.jvg.jpg");
+
+background-size: 100% 100%, auto 100%;
+background-position: left top, calc(100% + 160px) center;
+
     }
 
     header h1 {
