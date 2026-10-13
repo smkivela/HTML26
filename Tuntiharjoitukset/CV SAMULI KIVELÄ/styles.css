@@ -8,7 +8,7 @@
 :root {
     --tausta: #f1e7dc;
     --pinta: #faf8f6;
-    --sivupalkki: linear-gradient(to left, #302832, #0c040b);
+    --sivupalkki: linear-gradient(to left, #251b28, #0c040b);
     --cv-teksti: #38343a;
     --teksti: #f5f0f3;
     --vaimea: #777078;
@@ -423,7 +423,7 @@ header a:hover {
 
 .siniaalto path {
     fill: none;
-    stroke: #626d91;
+    stroke: #d4c0ab;
     stroke-width: 2;
     stroke-linecap: round;
 }
@@ -444,7 +444,7 @@ header a:hover {
 
 .kanttiaalto path {
     fill: none;
-    stroke: #039b9b;
+    stroke: #dac6b1;
     stroke-width: 2;
     stroke-linecap: butt;
     stroke-linejoin: miter;
@@ -456,7 +456,7 @@ header a:hover {
     width: 350px;
     height: auto;
     fill: none;
-    stroke: #626d91;
+    stroke: #d2bda7;
     stroke-width: 2;
     pointer-events: none;
     z-index: 0;
