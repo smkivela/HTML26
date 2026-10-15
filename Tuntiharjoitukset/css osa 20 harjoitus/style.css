@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #f8f5e9;
+    --main-text-color: #333;
+    --main-card-bg-color: #f9f9f4;
+}
+
+body {
+    font-family: monospace;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    letter-spacing: 2px;
+}
+
+.product-section {
+    container-type: inline-size;
+    container-name: product;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.product-card {
+    background-color: var(--main-card-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.product-card h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.product-card p {
+    margin: 10px 0;
+}
+
+.product-card .price {
+    font-size: 1.2em;
+    color: #1e5ee9;
+}
+
+.product-card .cta {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #27c382;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-card .cta:hover {
+    background-color: #1bd896;
+}
+
+.product-card .cta:active {
+    background-color: #c2185b;
+}
+
+.product-card .cta:focus-visible {
+    outline: 2px solid #1856c2;
+    outline-offset: 2px;
+}
+
+@container product (min-width: 600px) {
+    .product-card {
+        max-width: 640px;
+        padding: 0;               
+        overflow: hidden;               
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        text-align: left;
+    }
+
+    .product-card img {
+        height: 100%;
+        object-fit: cover;       
+        border-radius: 0;
+    }
+
+    .product-info {
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .product-card h2 {
+        margin-top: 0;
+    }
+}

@@ -32,6 +32,9 @@ footer { text-align: center; padding: 2rem; background: #17132d; color: white; }
   .hero-inner { padding-top: 3rem; padding-bottom: 3rem; }
   .product-grid { grid-template-columns: 1fr; }
   .benefits { grid-template-columns: 1fr; }
-  /* Tässä harjoituksessa on tarkoituksellinen responsiivisuusvirhe. */
-  .product-card { min-width: 420px; }
+
+  /* Poistin tämän säännön */
+  /* .product-card { min-width: 420px; } */
 }
+
+/* Kortti on jo 1fr-sarakkeessa, ja box-sizing: border-box pitää paddingin mukana leveydessä. */
