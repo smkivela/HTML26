@@ -21,12 +21,15 @@
 
     <!-- HEADER -->
 
+
+  <div class="header-container"> <!-- CONTAINER HEADERILLE, JOTTA SAAN KUPERALLE ALAREUNALLE VARJON -->
+
     <header id="ylätunniste">
 
         <h1>Samuli Kivelä</h1>
 
         <p id="slogan">
-            <em>Welcome to my world of music and sound</em>
+            <em>Welcome to my world of music, sound and programming</em>
         </p>
 
 
@@ -92,6 +95,8 @@
 
     </header>
 
+  </div> <!-- SULJETAAN HEADERIN CONTAINER -->
+
 
     <!-- PÄÄSISÄLTÖ -->
 
@@ -109,6 +114,9 @@
 
                 <section class="kortti">
 
+
+                    <img src="Kuvat/mproduction.png" alt="Music Production" class="kortti-kuva">
+
                     <h2>Music Production</h2>
 
                     <p>
@@ -125,6 +133,7 @@
 
                 <section class="kortti">
 
+                    <img src="Kuvat/sound.webp" alt="Sound Design" class="kortti-kuva">
                     <h2>Sound Design</h2>
 
                     <p>
@@ -141,6 +150,7 @@
 
                 <section class="kortti">
 
+                    <img src="Kuvat/guitar.webp" alt="Guitar Lessons" class="kortti-kuva">
                     <h2>Guitar Lessons</h2>
 
                     <p>
@@ -167,6 +177,39 @@
 
             <section class="kortti">
 
+                <!-- CLAUDEN AVULLA TEHTY ÄÄNIAALTO -->
+
+                    <svg class="kortti-kuva aalto-svg" viewBox="0 0 400 280"
+                        preserveAspectRatio="xMidYMid slice" role="img"
+                        aria-label="Oscilloscope-style sound wave that reacts to the mouse">
+                        <defs>
+                            <radialGradient id="ruutu-tausta" cx="50%" cy="50%" r="75%">
+                                <stop offset="0%" stop-color="rgb(40, 26, 14)" />
+                                <stop offset="100%" stop-color="rgb(10, 6, 2)" />
+                            </radialGradient>
+
+                            <filter id="hehku" x="-10%" y="-30%" width="120%" height="160%">
+                                <feGaussianBlur stdDeviation="4" />
+                            </filter>
+                        </defs>
+
+                        <rect width="400" height="280" fill="url(#ruutu-tausta)" />
+
+                        <!-- Ruudukko -->
+                        <path class="ruudukko"
+                            d="M50 0V280 M100 0V280 M150 0V280 M250 0V280 M300 0V280 M350 0V280
+                                M0 35H400 M0 70H400 M0 105H400 M0 175H400 M0 210H400 M0 245H400" />
+
+                        <!-- Keskiakselit -->
+                        <path class="akseli" d="M200 0V280 M0 140H400" />
+
+                        <!-- Asteikkoviivat akselien päällä -->
+                        <path class="asteikko" d="M0 140H400 M200 0V280" />
+
+                        <!-- Aalto: hehku + terävä viiva -->
+                        <path class="aalto aalto-hehku" filter="url(#hehku)" />
+                        <path class="aalto aalto-viiva" />
+                    </svg>
                 <h2>Programming</h2>
 
                 <p>
@@ -174,8 +217,7 @@
                     coding can be used to create websites, software, and
                     other digital tools.
 
-                    This page is also part of my journey into the world
-                    of programming.
+                    This website is made by me using HTML, CSS, and JavaScript.
                 </p>
 
             </section>
@@ -277,6 +319,68 @@
         </p>
 
     </footer>
+
+
+    <!-- CLAUDEN TEKEMÄ ANIMOITU ÄÄNIAALTO -->
+
+    <script>
+    const svg = document.querySelector(".aalto-svg");
+    const aallot = svg.querySelectorAll(".aalto");
+
+    const W = 400;
+    const H = 280;
+    const PISTEET = 80;
+
+    const lepo = { amp: 0.25, freq: 0.3 };
+    const tavoite = { ...lepo };
+    const nykyinen = { ...lepo };
+    let vaihe = 0;
+
+    svg.addEventListener("pointermove", (e) => {
+        const r = svg.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width;   // 0 → 1
+        const y = (e.clientY - r.top) / r.height;   // 0 → 1
+
+        tavoite.freq = x;
+        tavoite.amp = 1 - y;
+    });
+
+    svg.addEventListener("pointerleave", () => {
+        tavoite.amp = lepo.amp;
+        tavoite.freq = lepo.freq;
+    });
+
+    function piirra() {
+        const amp = nykyinen.amp * 100;
+        const taajuus = 1 + nykyinen.freq * 5;
+
+        let d = "";
+        for (let p = 0; p <= PISTEET; p++) {
+            const t = p / PISTEET;
+            const y = H / 2 + Math.sin(t * taajuus * Math.PI * 2 + vaihe) * amp;
+            d += (p === 0 ? "M" : "L") + (t * W).toFixed(1) + " " + y.toFixed(1) + " ";
+        }
+
+        aallot.forEach((polku) => polku.setAttribute("d", d));
+    }
+
+    function animoi() {
+        // pehmeä siirtymä kohti tavoitearvoja
+        nykyinen.amp += (tavoite.amp - nykyinen.amp) * 0.08;
+        nykyinen.freq += (tavoite.freq - nykyinen.freq) * 0.08;
+        vaihe += 0.01 + nykyinen.freq * 0.01;
+
+        piirra();
+        requestAnimationFrame(animoi);
+    }
+
+    // Kunnioitetaan käyttäjän "vähennä liikettä" -asetusta
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        piirra();
+    } else {
+        animoi();
+    }
+</script>
 
 
 </body>
