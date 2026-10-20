@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
     <!-- Favicon -->
     <link rel="icon" href="Kuvat/favicon.svg" type="image/svg+xml">
 </head>
@@ -60,7 +60,7 @@
 
             <!-- SIVUN NAVIGAATIO -->
 
-            <nav id="navigointi-left">
+            <nav id="navigointi-left" aria-label="pages">
 
                 <ul class="navi">
 
@@ -90,7 +90,7 @@
 
             <!-- SOSIAALISET MEDIAT -->
 
-            <nav id="navigointi-right">
+            <nav id="navigointi-right" aria-label="social media">
 
                 <ul class="navi">
 
@@ -123,7 +123,7 @@
 
     <main id="pääsisältö">
 
-        <article>
+        <section>
 
 
 
@@ -250,40 +250,30 @@
 
 
 
+<!-- AUDIOREEL -->
 
-                        <!-- ABOUT -->
+<div class="video-osio">
+    <iframe
+        src="https://drive.google.com/file/d/1wWGMAIc3ltgHZ-Iq0VxycG89lCsigDwL/preview"
+        title="Audio reel: selected work in music and sound design"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+        tabindex="-1">
+    </iframe>
+</div>
 
-            <div class="about">
-
-                <h2>Who am I?</h2>
-
-                <p>
-                    I’m Samuli Kivelä (MMus), a musician, sound designer,
-                    and music producer living in Helsinki. </p><p>
-
-                    I’ve got loads of experience in different music styles,
-                    and I love creating unique sounds for artists, shows,
-                    and all kinds of media. </p><p>
-
-                    My work goes from composing and producing tracks to
-                    designing sound for theater, film, and other cool projects. </p>
-                    <p>
-                    Besides that, I’m an active musician and sound designer
-                    with theater group Helsinki98, working on some pretty
-                    exciting and experimental projects.
-                </p><p> 
-                    I studied at the Sibelius Academy, so I’ve got a solid
-                    music background, but I always keep it fresh and true
-                    to my own vibe.
-                </p>
-
-            </div>
+<p class="video-linkki">
+    <a href="https://drive.google.com/file/d/1wWGMAIc3ltgHZ-Iq0VxycG89lCsigDwL/view"
+       target="_blank" rel="noopener">
+        Open the audio reel in a new tab
+    </a>
+</p>
 
 
 
 
 
-        </article>
+    </section>
 
     </main>
 
@@ -401,6 +391,48 @@
     } else {
         animoi();
     }
+
+    
+</script>
+
+<!-- CLAUDEN TEKEMÄ SCROLL-ANIMAATIO -->
+
+<script>
+(function () {
+    // Ei animaatiota, jos käyttäjä on pyytänyt vähemmän liikettä
+    // tai selain ei tue IntersectionObserveria
+    if (
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+        !("IntersectionObserver" in window)
+    ) {
+        return;
+    }
+
+    const kohteet = document.querySelectorAll(".kortti, .video-osio");
+
+    const tarkkailija = new IntersectionObserver((merkinnat) => {
+        let jarjestys = 0;
+
+        merkinnat.forEach((merkinta) => {
+            if (!merkinta.isIntersecting) return;
+
+            // Jos useampi elementti ilmestyy yhtä aikaa, ne tulevat porrastetusti
+            merkinta.target.style.transitionDelay = jarjestys * 0.12 + "s";
+            merkinta.target.classList.add("nakyvissa");
+            jarjestys++;
+
+            // Animaatio tapahtuu vain kerran
+            tarkkailija.unobserve(merkinta.target);
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    kohteet.forEach((elementti) => {
+        elementti.classList.add("fade-in");
+        tarkkailija.observe(elementti);
+    });
+})();
 </script>
 
 

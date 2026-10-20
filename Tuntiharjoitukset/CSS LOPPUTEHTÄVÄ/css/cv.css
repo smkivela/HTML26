@@ -486,29 +486,7 @@ header a:hover {
     opacity: 0.2;
 }
 
-/* TABLETTI */
 
-@media (max-width: 760px) {
-    body {
-        padding: 16px 10px;
-    }
-
-    .cv {
-        grid-template-columns: 250px minmax(0, 1fr);
-    }
-
-    .sidebar {
-        padding: 30px 22px;
-    }
-
-    .content {
-        padding: 32px 26px;
-    }
-
-    header h1 {
-        font-size: 34px;
-    }
-}
 
 /* MOBIILI */
 
@@ -532,7 +510,7 @@ header a:hover {
                 rgba(7, 6, 7, 0) 50%,
                 rgba(7, 6, 7, 1) 100%
             ),
-            url("kuvat/headertausta.jpg");
+            url("../Kuvat/headertausta.jpg");
 
         background-size: 100% 100%, cover;
         background-position: left top, 75% 20%;

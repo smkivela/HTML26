@@ -12,6 +12,8 @@
     <title>Samuli Kivelä — CV</title>
 
     <link rel="stylesheet" href="../css/cv.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../Kuvat/favicon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -868,10 +870,15 @@ if (vaimeneva) {
 }
 
 // Aallot päivittyvät vain scrollatessa
-window.addEventListener("scroll", () => {
-scrollY = window.scrollY;
-animoiAallot();
-}, { passive: true });
+
+const vahennettyLiike = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (!vahennettyLiike) {
+    window.addEventListener("scroll", () => {
+        scrollY = window.scrollY;
+        animoiAallot();
+    }, { passive: true });
+}
 
 // Piirretään aallot aluksi kerran
 animoiAallot();
