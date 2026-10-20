@@ -48,7 +48,9 @@ Kuvat/              Kuvat ja favicon
 
 5. Mobiilissa navigaation, sloganin ja h1:n paikat muuttuvat, jotta ulkoasu näyttäisi hyvältä ja tekstit erottuisivat taustakuvasta.
 
-6. Audioreel on ohitettu tabindexillä, koska selain jäi jumiin siihen eikä päässyt lomakkeeseen asti.
+6. Audioreel on ohitettu tabindexillä, koska selain jäi jumiin siihen eikä päässyt lomakkeeseen asti.''
+
+7. Google drive upotus toimi mobiilissa huonosti, joten kapeammilla näytöillä sen tilalla on linkki audioreeliin.
 
 <!-- Saavutettavuus -->
 

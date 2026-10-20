@@ -45,7 +45,7 @@ header {
 
     text-align: center;
 
-    min-height: 70vh;
+    min-height: 78vh;
 
     padding: 2px 0 60px;
 
@@ -166,7 +166,7 @@ h1 {
     color: var(--Tekstivärivaalea);
 
     font-family: var(--font-main);
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 
     text-decoration: none;
 
@@ -217,31 +217,58 @@ article {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
+    margin: 0 auto;
     overflow: hidden;
+    border-radius: var(--radius-m);
+    background: #000;
 }
 
 .video-osio iframe {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
     display: block;
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
     border: 0;
 }
 
 .video-linkki {
     padding: var(--space-s);
     font-size: var(--text-s);
+    display: none;
 }
 
-.video-linkki a {
-    color: inherit;
+@media (max-width: 768px) {
+    .video-linkki {
+        display: block;
+    }
+
+    .desktop-audioreel {
+        display: none;
+    }
 }
+
 
 .video-linkki a:focus-visible {
     outline: 2px solid var(--Tekstiväritumma);
     outline-offset: 3px;
 }
+
+.video-linkki a {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    font-weight: 700;
+    color: inherit;
+    text-decoration: none;
+}
+
+.video-linkki a:hover {
+    text-decoration: underline;
+}
+
 
 
 
@@ -581,11 +608,7 @@ img.kortti-kuva {
 
 
 
-@media (max-width: 600px) {
-    .työt {
-        padding: 0 15px;
-    }
-}
+
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -714,6 +737,18 @@ img.kortti-kuva {
 
 
 
+    .työt {
+        padding: 0 15px;
+    }
+
+    .video-linkki {
+        display: block;
+    }
+
+    .desktop-audioreel {
+        display: none;
+    }
+
 
     header {
         min-height: 92svh;
@@ -721,6 +756,7 @@ img.kortti-kuva {
     }
 
     /* navigaatio ylös, kokonaan vaakaan, space-between */
+
     .header-nav {
         order: -1;
         flex-direction: row;
