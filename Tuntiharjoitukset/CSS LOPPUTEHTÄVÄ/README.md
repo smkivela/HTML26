@@ -59,7 +59,7 @@ Kuvat/              Kuvat ja favicon
 
 <!-- Testattu -->
 
--Selaimet: Tietokoneella ja mobiilissa: Chrome ja Safari.
+-Selaimet: Tietokoneella ja mobiilissa: Chrome ja Safari. Mobiilissa testattu android sekä ios.
 -Näkymät: Devtoolsissa eri näytön leveydet.
 -Näppäimistöllä navigointi
 
