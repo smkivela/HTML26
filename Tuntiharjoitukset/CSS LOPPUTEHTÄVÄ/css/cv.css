@@ -544,6 +544,7 @@ header a:hover {
 
 
 
+
 /* TULOSTUS JA PDF */
 
 @media print {
@@ -552,33 +553,12 @@ header a:hover {
         margin: 10mm;
     }
 
-    .sidebar-section summary::after,
-    .content details > summary::after {
-    display: none;
-}
-
-.cv {
-    position: static;
-    backdrop-filter: none;
-}
-
-.sidebar {
-    position: static;
-    height: auto;
-    overflow: visible;
-    align-self: stretch;
-}
-
-.sidebar-section[open] {
-    margin-bottom: 24px;
-}
-
-/* Taustalla liikkuvat aallot eivät kuulu tulosteeseen */
-.siniaalto,
-.kanttiaalto,
-.aalto {
-    display: none;
-}
+    html,
+    body {
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+    }
 
     body {
         background: white;
@@ -591,36 +571,68 @@ header a:hover {
         -webkit-print-color-adjust: exact;
     }
 
-
+    /* CV:n kokonaisrakenne */
     .cv {
+        position: static;
         display: grid;
         grid-template-columns: 29% minmax(0, 1fr);
+        align-items: start;
+
+        width: 100%;
         max-width: none;
+        height: auto !important;
+        max-height: none !important;
+        margin: 0;
+
+        overflow: visible !important;
         box-shadow: none;
+        backdrop-filter: none;
+        isolation: auto;
     }
 
+    .cv::before {
+        display: none;
+    }
+
+    /* Sivupalkki */
     .sidebar {
         grid-column: 1;
         grid-row: 1;
-        padding: 20px 15px;
 
+        position: static;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        align-self: stretch;
+
+        padding: 20px 15px;
         background: var(--sivupalkki) !important;
         color: var(--sivupalkki-teksti) !important;
 
         animation: none;
     }
 
+    /* Oikeanpuoleinen sisältö */
     .content {
         grid-column: 2;
         grid-row: 1;
+
+        min-width: 0;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+
         padding: 22px 24px;
         animation: none;
     }
 
+    /* Otsikko ja taustakuva */
     header {
         margin-bottom: 22px;
         padding-bottom: 16px;
-                background-image:
+
+        background-color: #302832;
+        background-image:
             linear-gradient(
                 to right,
                 rgba(7, 6, 7, 0.85) 0%,
@@ -628,17 +640,21 @@ header a:hover {
                 rgba(7, 6, 7, 0.15) 38%,
                 rgba(7, 6, 7, 0) 60%
             ),
-            url("kuvat/headertausta.jpg");
+            url("../Kuvat/headertausta.jpg");
 
-background-size: 100% 100%, auto 100%;
-background-position: left top, calc(100% + 160px) center;
+        background-size: 100% 100%, auto 100%;
+        background-position: left top, calc(100% + 160px) center;
+        background-repeat: no-repeat;
 
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
     }
 
     header h1 {
         font-size: 25pt;
     }
 
+    /* Tiiviimpi asettelu */
     .sidebar section,
     .content section {
         margin-bottom: 18px;
@@ -654,16 +670,58 @@ background-position: left top, calc(100% + 160px) center;
         font-size: 10pt;
     }
 
+    /* Avaa sisältö tulostettaessa */
+    .sidebar-section,
+    .content details {
+        display: block;
+        height: auto;
+        overflow: visible;
+    }
+
+    .sidebar-section[open] {
+        margin-bottom: 24px;
+    }
+
+    .sidebar-section summary::after,
+    .content details > summary::after {
+        display: none;
+    }
+
+    /* Piilota taustakoristeet */
+    .siniaalto,
+    .kanttiaalto,
+    .aalto {
+        display: none !important;
+    }
+
     a {
         text-decoration: none !important;
     }
 
+    /* Älä pidä pitkiä osioita väkisin yhdellä sivulla */
     section,
+    article,
+    details,
     h2,
     h3 {
-        break-inside: avoid;
+        break-inside: auto;
+        page-break-inside: auto;
+    }
+
+    /* Älä jaa yksittäisiä otsikoita irralleen seuraavasta sisällöstä */
+    h2,
+    h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    .sidebar-section summary,
+    .content details > summary {
+        break-after: avoid;
+        page-break-after: avoid;
     }
 }
+
 
 /* SISÄÄNTULOANIMAATIO */
 
