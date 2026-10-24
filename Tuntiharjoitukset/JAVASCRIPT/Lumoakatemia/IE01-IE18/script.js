@@ -186,3 +186,55 @@ if (luku8 === luku9) {
 
 
 
+
+// IE15 ------------------------------------------------------------
+
+
+
+const ikä = 190;
+
+if (ikä <= 18) {
+    console.log("Et voi äänestää");
+}
+else { console.log("Voit äänestää.")
+
+}
+
+
+// IE17 --------------------------------------------------------------
+
+
+// teen taulukolla ja loopilla, koska ne kerettiin opettaa jo.
+
+let summa = 1787;
+
+const setelitjakolikot = [500, 200, 100, 50, 20, 10, 5, 2, 1]
+
+for (let i = 0; i < setelitjakolikot.length; i++) {
+  let seteli = setelitjakolikot[i];
+
+  let setelimäärä = Math.floor(summa / seteli);
+
+  summa = summa % seteli;
+
+console.log(seteli + " €: " + setelimäärä + " kpl");
+}
+
+
+
+
+// IE18 ----------------------------------------------------------------
+
+
+
+
+
+const aste1 = 40;
+const aste2 = 60;
+const aste3 = 80;
+
+if (aste1 + aste2 + aste3 === 180) {
+    console.log("Voit piirtää kolmion annetuilla asteilla.")
+} else {
+    console.log ("Et voi piirtää kolmiota annetuilla asteilla")
+}
