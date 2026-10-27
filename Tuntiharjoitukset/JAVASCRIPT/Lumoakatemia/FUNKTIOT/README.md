@@ -1,0 +1,1 @@
+Opiskelin funktioita w3schoolista ja tekoälyn avulla ja tein tehtävät.
