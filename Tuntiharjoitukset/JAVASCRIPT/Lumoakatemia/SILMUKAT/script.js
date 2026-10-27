@@ -211,3 +211,6 @@ for (let i = 1; i <= pienempi; i++) {
     }
 }
 console.log(`Lukujen ${lukuA} ja ${lukuB} suurin yhteinen nimittäjä on ${suurinYhteinenNimittäjä}`);
+
+
+

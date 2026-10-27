@@ -1,0 +1,1 @@
+Pyysin chatgtp:tä tekemään javascript -tehtäviä ja tein niitä tänne.
