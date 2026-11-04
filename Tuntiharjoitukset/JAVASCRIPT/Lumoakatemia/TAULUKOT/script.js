@@ -200,6 +200,9 @@ console.log(uniikit);
 
 
 
+
+
+
 // T18. Vaihda taulukon ([1, 2, 3, 4, 5]) ensimmäisen ja viimeisen alkion paikkoja ja tulosta taulukko konsoliin
 
 const numerotaulukko6 = [1, 2, 3, 4, 5];
@@ -208,3 +211,236 @@ const viimeinen = numerotaulukko6[numerotaulukko6.length - 1];
 numerotaulukko6[0] = viimeinen;
 numerotaulukko6[numerotaulukko6.length - 1] = ensimmäinen;
 console.log(numerotaulukko6);
+
+
+
+
+// T19. Muunna taulukon (["Matti", "Anna", "Eeva"]) merkkijonojen kaikki kirjaimet isoiksi ja tulosta taulukko konsoliin
+
+const nimet5 = ["matti", "anna", "eeva"];
+const isotNimet = nimet5.map(nimi => nimi.toUpperCase());
+console.log(isotNimet);
+
+
+
+
+
+
+
+// T20. Poista taulukosta ([1, 2, 3, 4, 5]) kaikki neljää pienemmät numerot ja tulosta taulukko konsoliin
+
+const numerot2 = [1, 2, 3, 4, 5];
+
+const vainsuuret = numerot2.filter (numerot2 => numerot2 > 3);
+
+console.log(vainsuuret);
+
+
+
+
+
+// T21. Lisää luku 4 taulukon [1, 2, 3] loppuun push-metodilla.
+
+const taulukko4 = [1, 2, 3];
+
+taulukko4.push(4);
+
+console.log(taulukko4);
+
+
+
+
+
+// T22. Poista taulukon ["omena", "banaani", "päärynä"] ensimmäinen alkio shift-metodilla.
+
+const hedelmat = ["omena", "banaani", "päärynä"];
+hedelmat.shift();
+console.log(hedelmat);
+
+
+
+
+
+// T23. Lisää "punainen" alkio taulukon ["sininen", "vihreä"] alkuun unshift-metodilla.
+
+const värit = ["sininen", "vihreä"];
+värit.unshift("punainen");
+console.log(värit);
+
+
+
+// T24. Poista taulukon ["koira", "kissa", "lintu"] viimeinen alkio pop-metodilla.
+
+const eläimet = ["koira", "kissa", "lintu"];
+eläimet.pop();
+console.log(eläimet);
+
+
+
+
+// T25. Etsi alkion "Mikko" indeksi taulukosta ["Anna", "Mikko", "Laura"] indexOf-metodilla.
+
+
+
+const nimitaulukko2 = ["Anna", "Mikko", "Laura"];
+
+console.log(nimitaulukko2.indexOf("Mikko"));
+
+
+
+
+
+// T26. Kopioi b ja c taulukosta ["a", "b", "c", "d"] slice-metodilla.
+
+const taulukko5 = ["a", "b", "c", "d"];
+const kopio1 = taulukko5.slice(1, 3);
+console.log(kopio1);
+
+
+
+
+// T27. Poista "Helmi" ja lisää "Huhti" taulukosta ["Tammi", "Helmi", "Maalis"] splice-metodilla.
+
+const kuukaudet = ["Tammi", "Helmi", "Maalis"];
+kuukaudet.splice(1, 1, "Huhti");
+console.log(kuukaudet);
+
+
+
+// T28. Yhdistä kaksi taulukkoa [1, 2] ja [3, 4] spread-operaattorilla
+
+
+const taulu1 = [1, 2];
+const taulu2 = [3, 4];
+
+const yhdistetty1 = [...taulu1, ...taulu2];
+
+console.log(yhdistetty1);
+
+
+
+// T29. Tee kopio taulukosta ["x", "y", "z"] spread-operaattorilla
+
+const xytaulukko = ["x", "y", "z"];
+
+const kopioxytaulukko = [...xytaulukko];
+
+console.log(kopioxytaulukko);
+
+
+
+// T30. Poista kaikki alkiot yhdellä splice-kutsulla taulukosta [10, 20, 30]
+
+
+const leikattavataulukko = [10, 20, 30];
+
+leikattavataulukko.splice(0, leikattavataulukko.length);
+
+console.log(leikattavataulukko);
+
+
+
+
+
+// T31. Lisää alkiot 1 ja 2 taulukon [3, 4] alkuun unshift-metodilla
+
+
+
+const lisättävätaulukko = [3, 4];
+
+lisättävätaulukko.unshift(1, 2);
+
+console.log(lisättävätaulukko);
+
+
+
+
+
+
+// T32. Poista alkio "b" indexOf + splice yhdistelmällä taulukosta ["a", "b", "c"]
+
+
+const alkiot = ["a", "b", "c"];
+
+const poistettavaindeksi = alkiot.indexOf("b");
+
+alkiot.splice(poistettavaindeksi, 1);
+console.log(alkiot);
+
+
+
+
+
+// T33. Käännä taulukko [1, 2, 3] spread-operaattorilla ja reverse-metodilla
+
+const taulukko6 = [1, 2, 3];
+const kaannetty = [...taulukko6].reverse();
+console.log(kaannetty);
+
+
+
+
+
+// T34. Lisää alkio 3 keskelle taulukkoa [1, 2, 4, 5] splice-metodilla.
+
+
+
+const taulukko7 = [1, 2, 4, 5];
+taulukko7.splice(2, 0, 3);
+console.log(taulukko7);
+
+ 
+
+
+
+// T35. Poista kaikki numero 2:n esiintymät taulukosta [1, 2, 3, 2, 4]
+
+const numerot = [1, 2, 3, 2, 4];
+for (let i = numerot.length - 1; i >= 0; i--) {
+    if (numerot[i] === 2) {
+        numerot.splice(i, 1);
+    }
+}
+console.log(numerot);
+
+
+
+
+//T36. Tarkista, onko "html"-alkio olemassa indexOf-metodilla taulukossa ["js", "html", "css"]
+
+const kielet = ["js", "html", "css"];
+const onHtml = kielet.indexOf("html") !== -1;
+console.log(onHtml);
+
+
+
+// T37. Kopioi taulukon [10, 20, 30, 40] viimeiset 2 alkiota slice-metodilla
+
+const taulukko8 = [10, 20, 30, 40];
+const viimeisetKaksi = taulukko8.slice(-2);
+console.log(viimeisetKaksi);
+
+
+
+// T38. Yhdistä taulukko [1, 2] itseensä kahdesti spread-operaattorilla 
+
+const taulukko9 = [1, 2];
+const yhdistetty2 = [...taulukko9, ...taulukko9, ...taulukko9];
+console.log(yhdistetty2);
+
+
+// T39. Poista taulukon [10, 20, 30, 40] ensimmäinen ja viimeinen alkio 
+
+const taulukko10 = [10, 20, 30, 40];
+taulukko10.shift();
+taulukko10.pop();
+console.log(taulukko10);
+
+
+
+// T40. Tee uusi taulukko, jossa on alkuperäinen [1, 2, 3, 4, 5] ilman keskimmäistä alkiota 
+
+const alkuperainen2 = [1, 2, 3, 4, 5];
+const ilmanKeskimmaista = [...alkuperainen2.slice(0, 2), ...alkuperainen2.slice(3)];
+console.log(ilmanKeskimmaista);
+
