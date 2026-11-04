@@ -236,3 +236,111 @@ Lämmin päivä
 Lämmin päivä
 */
 
+
+
+function tarkistaLämpötila(lämpötilaluku){
+    if(lämpötilaluku<=15) {
+        return "Viileä päivä";
+    } else {
+        return "Lämmin päivä";
+    }
+}
+
+console.log(tarkistaLämpötila(12)); 
+console.log(tarkistaLämpötila(16));
+console.log(tarkistaLämpötila(15));
+console.log(tarkistaLämpötila(19));
+
+
+
+
+/* Funktiotreeni: Ostoskorin laskuri
+Tehtävänä on tehdä funktio nimeltä laskeOstokset, joka ottaa parametrina ostosten hinnat sisältävän taulukon.
+
+Esimerkiksi:
+laskeOstokset([10, 15, 20, 5])
+
+
+Funktio palauttaa ostosten yhteishinnan.
+
+Mutta tässä tulee kolme lisävaatimusta:
+1. Laske kaikkien ostosten yhteishinta.
+2. Jos summa on yli 50 €, anna 10 % alennus.
+3. Palauta lopullinen hinta.
+ */
+
+
+
+function laskeOstokset(ostokset) {
+
+    let yhteishinta = 0;
+
+    for (let i = 0; i < ostokset.length; i++) {
+        yhteishinta += ostokset[i];
+    }
+
+    if (yhteishinta <= 50) {
+        return yhteishinta;
+    } else {
+        return yhteishinta*0.9;
+    }
+
+}
+
+console.log("Ostosten yhteishinta on " + laskeOstokset([10, 20, 30]) + "€");
+
+
+
+/* Funktiotreeni 3: Arvosanalaskuri
+Tee funktio nimeltä laskeArvosana, joka ottaa parametrina taulukon opiskelijan koepisteistä.
+
+Esimerkiksi:
+laskeArvosana([8, 7, 9, 6, 10])
+
+
+Funktion pitää laskea pisteiden keskiarvo ja palauttaa sitä vastaava arvosana.
+
+Arvosana-asteikko:
+Keskiarvo	Arvosana
+9–10	5
+8–alle 9	4
+7–alle 8	3
+6–alle 7	2
+5–alle 6	1
+Alle 5	0
+
+*/
+
+function laskeArvosana(koepisteet) {
+
+    let pisteetyht = 0;
+
+    if (koepisteet.length === 0) {
+    return "Ei koepisteitä";
+}
+    
+
+    for(let i = 0; i < koepisteet.length; i++) {
+        pisteetyht += koepisteet[i];
+    }
+
+    let keskiarvo = pisteetyht / koepisteet.length;
+
+        if (keskiarvo >= 9) {
+            return "Kiitettävä 5";
+        } else if (keskiarvo >= 8) {
+            return "Erinomainen 4";
+        } else if (keskiarvo >= 7) {
+            return "Hyvä 3";
+        } else if (keskiarvo >= 6) {
+            return "Menettelee 2";
+        } else if (keskiarvo >= 5) {
+            return "Tyydyttävä 1";
+        } else {
+            return "Hylätty 0";
+        }
+}
+
+console.log(laskeArvosana([1, 4, 6, 7]));
+
+
