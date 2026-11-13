@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script> 
+</head>
+<body>
+    
+    <h2>Rekisteröityminen</h2>
+
+
+    <form id="lomake"> 
+        <label for="name">Nimi:</label>
+        <input type="text" id="name" name="name" required minlength="2" maxlength="50"><br><br>
+
+        <label for="email">Sähköposti:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Salasana:</label>
+        <input type="password" id="password" name="password" required minlength="8"><br><br>
+
+        <label for="confirmPassword">Vahvista salasana:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required minlength="8"><br><br>
+
+        <input type="submit" value="Lähetä">
+    </form>
+
+
+    <h2>Yhteenveto</h2>
+    <p id="yhteenveto"></p>
+</body>
+</html>
