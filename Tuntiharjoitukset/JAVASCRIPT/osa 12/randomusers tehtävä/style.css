@@ -1,0 +1,93 @@
+/* Perusasetukset koko sivulle */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: rgb(246, 240, 233);
+    color: #2d3748;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 100 0 32px;
+    color: #1a365d;
+}
+
+#error {
+    text-align: center;
+    color: #c53030;
+    font-weight: bold;
+}
+
+
+#kortit {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 2fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+
+
+
+.kortti {
+    background: white;
+    border-radius: 1px;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kortti:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+.kortti img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid #e2e8f0;
+    object-fit: cover;
+}
+
+.kortti h2 {
+    font-size: 1.25rem;
+    margin: 14px 0 4px;
+    color: #1a365d;
+}
+
+.ika {
+    margin: 0 0 16px;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+
+.kortti ul {
+    list-style: none;
+    padding: 16px 0 0;
+    margin: 0;
+    border-top: 1px solid #edf2f7;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.kortti li {
+    padding: 4px 0;
+    overflow-wrap: anywhere; 
+}
+
+.kortti li span {
+    display: inline-block;
+    width: 24px;
+}
