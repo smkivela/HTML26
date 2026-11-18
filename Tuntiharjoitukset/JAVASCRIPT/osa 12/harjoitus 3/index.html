@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+
+<h1>Lisää käyttäjä</h1>
+
+  <form id="lomake">
+    <label>
+      Etunimi
+      <input type="text" name="firstName" required>
+    </label>
+    <label>
+      Sukunimi
+      <input type="text" name="lastName" required>
+    </label>
+    <label>
+      Sähköposti
+      <input type="email" name="email" required>
+    </label>
+    <button type="submit">Lähetä</button>
+  </form>
+
+  <p id="tila"></p>
+  <pre id="vastaus"></pre>
+</body>
+</html>
