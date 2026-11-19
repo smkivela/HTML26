@@ -1,0 +1,34 @@
+:root {
+    --tausta: #ffffff;
+    --teksti: #1a1a1a;
+    --nappi: #e5e7eb;
+}
+
+body.dark {
+    --tausta: #0f1117;
+    --teksti: #f1f1f1;
+    --nappi: #2a2f3a;
+}
+
+body {
+    background: var(--tausta);
+    color: var(--teksti);
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.napit {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    background: var(--nappi);
+    color: var(--teksti);
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}

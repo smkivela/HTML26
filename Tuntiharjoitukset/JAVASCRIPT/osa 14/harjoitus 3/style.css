@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    background: #f4f4f7;
+    max-width: 500px;
+}
+
+.lisays,
+.suodattimet {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+input {
+    flex: 1;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background: #ddd;
+    cursor: pointer;
+}
+
+#lisaa {
+    background: #6c5ce7;
+    color: white;
+}
+
+
+.aktiivinen {
+    background: #6c5ce7;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: white;
+    padding: 0.6rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+}
+
+li span {
+    flex: 1;
+}
+
+
+li.valmis span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.poista {
+    background: #e74c3c;
+    color: white;
+    padding: 0.3rem 0.7rem;
+}
