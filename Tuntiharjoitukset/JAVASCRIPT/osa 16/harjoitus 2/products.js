@@ -1,25 +1,10 @@
-/*
-  HARJOITUS 2 – LUOTETTAVA API-HAKU
-  Tavoite: käsittele sekä verkkovirhe että HTTP-virhe.
 
-  VAATIMUKSET
-  - 404/500 -> oma virhe
-  - käyttäjälle ymmärrettävä ilmoitus
-  - tekninen virhe console.erroriin
-  - loading poistuu aina
-  - onnistunut data renderöidään vasta tarkistusten jälkeen
-
-  HAASTE
-  - Lisää Retry-painike, joka yrittää latausta uudelleen
-    ilman sivun uudelleenlatausta.
-*/
 
 async function loadProducts() {
 
     const loading = document.getElementById("loading");
 
     
-    // Aloitetaan puhtaalta pöydältä (tärkeää Retry-yrityksessä)
     document.getElementById("retry").hidden = true;
     document.getElementById("error").textContent = "";
     document.getElementById("products").innerHTML = "";
